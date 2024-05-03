@@ -11,3 +11,33 @@
 	- Copy folder from pi to pc:
 		- scp -r pi@192.168.68.150:~/MUSICAL_DOOR_BELL /C:\Users\PC\Documents\Python\MUSICAL_DOOR_BELL_OUTDOOR 
 	- Copy file from pi to pc:
+		- scp pi@192.168.68.150:~/MUSICAL_DOOR_BELL/main.py /C:\Users\PC\Documents\Python\MUSICAL_DOOR_BELL_OUTDOOR
+	- Add you script at startup:
+		- sudo crontab -e
+		- @reboot python3 /home/pi/MUSICAL_DOOR_BELL/main.py &
+		- If you want to add logfile:
+			- @reboot sudo /usr/bin/python3 /home/pi/MUSICAL_DOOR_BELL/main.py > /home/pi/MUSICAL_DOOR_BELL/logfile.log 2>&1 &
+		- Better way to run on startup script:
+			- sudo nano /etc/rc.local
+			- If you want delay
+				- sleep 30
+			- su -c "python3 /path/to/your/script.py > /path/to/your/logfile.log 2>&1" pi &
+			- sudo chmod +x /etc/rc.local
+		- Run app with UI in startup use this:
+			- sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
+			- Add this in the end:
+				- @/usr/bin/python /home/pi/example.py
+			- hide the taskbar command this line in (sudo nano /etc/xdg/lxsession/LXDE-pi/autostart)
+				- #@lxpanel --profile LXDE-pi 
+			- Chnage splash screen:
+				- first change the splash image in what you like in this dir:
+					- /usr/share/plymouth/themes/pix
+				- then run this command:
+					- sudo plymouth-set-default-theme --rebuild-initrd pix
+				- Disable rainbow splash:
+					- Add or edit this line:
+						- disable_splash=1 to /boot/config.txt
+				- To remove the blinking curser add this:
+					- vt.global_cursor_default=0 to /boot/cmdline.txt
+				- Mute kernel logs (only show critical errors): 
+					- Add loglevel=3 to the /boot/cmdline.txt
