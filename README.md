@@ -53,3 +53,7 @@
 		- vt.global_cursor_default=0 to /boot/cmdline.txt
 	- Mute kernel logs (only show critical errors): 
 		- Add loglevel=3 to the /boot/cmdline.txt
+- Run GUI script from SSH:
+	- Run this command:
+		- export DISPLAY=:0
+	- Now you can run the script
