@@ -1,25 +1,27 @@
 # linux-commands
 ## Raspberry pi: 
 
- - **<u>Globale install for opencv:</u>**
+ - **<ins>Globale install for opencv:</ins>**
 	- sudo apt install python3-opencv
 
-- **venv opencv install opencv:**
+- **<ins>venv opencv install opencv:</ins>**
 	- pip install --upgrade pip
 	- pip install opencv-python
 	- pip install opencv-python --verbose (to track the process)
 	
-- **<u>open audio sound:</u>**
+- **<ins>open audio sound:</ins>**
 	- alsamixer
 
-- **<u>Copy folder from pi to pc:</u>**
+- **<ins>Copy folder from pi to pc:</ins>**
 	- scp -r pi@192.168.68.150:~/MUSICAL_DOOR_BELL /C:\Users\PC\Documents\Python\MUSICAL_DOOR_BELL_OUTDOOR 
 
-- **<u>Copy file from pi to pc:</u>**
+- **<ins>Copy file from pi to pc:</ins>**
 	- scp pi@192.168.68.150:~/MUSICAL_DOOR_BELL/main.py /C:\Users\PC\Documents\Python\MUSICAL_DOOR_BELL_OUTDOOR
 
-- **<u>Add you script at startup:</u>**
-	- sudo crontab -e
+- **<ins>Add you script at startup:</ins>**
+	- Run this command:
+		- sudo crontab -e
+	- Add this to the end:
 		- @reboot python3 /home/pi/MUSICAL_DOOR_BELL/main.py &
 	- If you want to add logfile:
 		- @reboot sudo /usr/bin/python3 /home/pi/MUSICAL_DOOR_BELL/main.py > /home/pi/MUSICAL_DOOR_BELL/logfile.log 2>&1 &
@@ -30,16 +32,16 @@
 		- su -c "python3 /path/to/your/script.py > /path/to/your/logfile.log 2>&1" pi &
 		- sudo chmod +x /etc/rc.local
 
-- **<u>Run app with UI in startup use this:</u>**
+- **<ins>Run app with UI in startup use this:</ins>**
 	- sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
 	- Add this in the end:
 		-  @/usr/bin/python /home/pi/example.py
 
-- **<u>Hide the taskbar command this line:</u>** 
+- **<ins>Hide the taskbar command this line:</ins>** 
 	-  sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
 	-  #@lxpanel --profile LXDE-pi  (command this line)
 
-- **<u>Chnage splash screen:</u>**
+- **<ins>Chnage splash screen:</ins>**
 	-  first change the splash image in what you like in this dir:
 	-  /usr/share/plymouth/themes/pix
 	-  then run this command:
