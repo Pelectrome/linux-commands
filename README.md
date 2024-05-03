@@ -3,27 +3,23 @@
 ## Raspberry pi:
 
 - **<ins>Globale install for opencv:</ins>**
-
   - sudo apt install python3-opencv
 
 - <ins>**venv opencv install opencv:**</ins>
   - pip install --upgrade pip
   - pip install opencv-python
   - pip install opencv-python --verbose (to track the process)
+  
 - **<ins>open audio sound:</ins>**
-
   - alsamixer
 
 - **<ins>Copy folder from pi to pc:</ins>**
-
   - scp -r pi@192.168.68.150:~/MUSICAL_DOOR_BELL /C:\Users\PC\Documents\Python\MUSICAL_DOOR_BELL_OUTDOOR
 
 - **<ins>Copy file from pi to pc:</ins>**
-
   - scp pi@192.168.68.150:~/MUSICAL_DOOR_BELL/main.py /C:\Users\PC\Documents\Python\MUSICAL_DOOR_BELL_OUTDOOR
 
 - **<ins>Add you script at startup:</ins>**
-
   - Run this command:
     - sudo crontab -e
   - Add this to the end:
@@ -38,13 +34,11 @@
     - sudo chmod +x /etc/rc.local
 
 - **<ins>Run app with UI in startup use this:</ins>**
-
   - sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
   - Add this in the end:
     - @/usr/bin/python /home/pi/example.py
 
 - **<ins>Hide the taskbar command this line:</ins>**
-
   - sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
   - #@lxpanel --profile LXDE-pi (command this line)
 
