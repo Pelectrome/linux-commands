@@ -1,18 +1,19 @@
 # linux-commands
 ## Raspberry pi: 
-    - **Globale install for opencv**:
+
+ - **Globale install for opencv:**
 	    - sudo apt install python3-opencv
-	- venv opencv install opencv:
+	- **venv opencv install opencv:**
 		- pip install --upgrade pip
 		- pip install opencv-python
 		- pip install opencv-python --verbose (to track the process)
-	- open audio sound:
+	- **open audio sound:**
 		- alsamixer
-	- Copy folder from pi to pc:
+	- **Copy folder from pi to pc:**
 		- scp -r pi@192.168.68.150:~/MUSICAL_DOOR_BELL /C:\Users\PC\Documents\Python\MUSICAL_DOOR_BELL_OUTDOOR 
-	- Copy file from pi to pc:
+	- **Copy file from pi to pc:**
 		- scp pi@192.168.68.150:~/MUSICAL_DOOR_BELL/main.py /C:\Users\PC\Documents\Python\MUSICAL_DOOR_BELL_OUTDOOR
-	- Add you script at startup:
+	- **Add you script at startup:**
 		- sudo crontab -e
 		- @reboot python3 /home/pi/MUSICAL_DOOR_BELL/main.py &
 		- If you want to add logfile:
@@ -23,21 +24,22 @@
 				- sleep 30
 			- su -c "python3 /path/to/your/script.py > /path/to/your/logfile.log 2>&1" pi &
 			- sudo chmod +x /etc/rc.local
-		- Run app with UI in startup use this:
-			- sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
-			- Add this in the end:
-				- @/usr/bin/python /home/pi/example.py
-			- hide the taskbar command this line in (sudo nano /etc/xdg/lxsession/LXDE-pi/autostart)
-				- #@lxpanel --profile LXDE-pi 
-			- Chnage splash screen:
-				- first change the splash image in what you like in this dir:
-					- /usr/share/plymouth/themes/pix
-				- then run this command:
-					- sudo plymouth-set-default-theme --rebuild-initrd pix
-				- Disable rainbow splash:
-					- Add or edit this line:
-						- disable_splash=1 to /boot/config.txt
-				- To remove the blinking curser add this:
-					- vt.global_cursor_default=0 to /boot/cmdline.txt
-				- Mute kernel logs (only show critical errors): 
-					- Add loglevel=3 to the /boot/cmdline.txt
+	- **Run app with UI in startup use this:**
+		- sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
+		- Add this in the end:
+			-  @/usr/bin/python /home/pi/example.py
+	- **Hide the taskbar command this line:** 
+		-  sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
+		-  #@lxpanel --profile LXDE-pi  (command this line)
+	- **Chnage splash screen:**
+		-  first change the splash image in what you like in this dir:
+		-  /usr/share/plymouth/themes/pix
+		-  then run this command:
+			-  sudo plymouth-set-default-theme --rebuild-initrd pix
+		- Disable rainbow splash:
+			- Add or edit this line:
+				-  disable_splash=1 to /boot/config.txt
+		- To remove the blinking curser add this:
+			- vt.global_cursor_default=0 to /boot/cmdline.txt
+		- Mute kernel logs (only show critical errors): 
+			- Add loglevel=3 to the /boot/cmdline.txt
