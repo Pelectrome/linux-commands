@@ -1,6 +1,6 @@
 # linux-commands
 ## Raspberry pi: 
-    - Globale install for opencv:
+    - **Globale install for opencv**:
 	    - sudo apt install python3-opencv
 	- venv opencv install opencv:
 		- pip install --upgrade pip
