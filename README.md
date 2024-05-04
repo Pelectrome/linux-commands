@@ -1,9 +1,7 @@
 # Linux-commands
 
 ## Raspberry pi:
-```diff
-@@Globale@@
-```
+`$${\color{green}Green}$$`
 
 1. **<ins>Globale install for opencv:</ins>**
 ```shell
