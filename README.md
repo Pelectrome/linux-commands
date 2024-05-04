@@ -8,9 +8,16 @@
 ```
 
 3. <ins>**venv opencv install opencv:**</ins>
-	  - pip install --upgrade pip
-	  - pip install opencv-python
-	  - pip install opencv-python --verbose (to track the process)
+```
+	  pip install --upgrade pip
+```
+```
+	   pip install opencv-python
+```
+		(to track the process)
+```
+	  pip install opencv-python --verbose 
+```
 
 4. **<ins>open audio sound:</ins>**
 	  - alsamixer
