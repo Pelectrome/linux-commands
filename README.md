@@ -3,7 +3,7 @@
 ## Raspberry pi:
 
 1. **<ins>Globale install for opencv:</ins>**
-```
+```bash
 sudo apt install python3-opencv
 ```
 
