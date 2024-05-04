@@ -2,6 +2,7 @@
 
 ## Raspberry pi:
 
+`$${\color{blue}**<ins>Globale install for opencv:</ins>**}$$`
 1. **<ins>Globale install for opencv:</ins>**
 ```bash
 sudo apt install python3-opencv
