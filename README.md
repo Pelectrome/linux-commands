@@ -78,8 +78,8 @@ scp pi@192.168.68.150:~/MUSICAL_DOOR_BELL/main.py /C:\Users\PC\Documents\Python\
 	    - export DISPLAY=:0
 	  - Now you can run the script
 
-
-## Linux:
+---
+## Linux:<img height="40px" align="right" src="https://www.debian.org/logos/openlogo-nd.svg" alt=""/>    
 
  1. keyboard shortcuts  : 
 	-  hibernate : sudo systemctl hibernate (Shift + Alt + H)
