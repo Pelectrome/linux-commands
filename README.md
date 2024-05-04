@@ -3,21 +3,21 @@
 ## Raspberry pi:
 
 1. **<ins>Globale install for opencv:</ins>**
-  - sudo apt install python3-opencv
+	  - sudo apt install python3-opencv
 
 2. <ins>**venv opencv install opencv:**</ins>
-  - pip install --upgrade pip
-  - pip install opencv-python
-  - pip install opencv-python --verbose (to track the process)
+	  - pip install --upgrade pip
+	  - pip install opencv-python
+	  - pip install opencv-python --verbose (to track the process)
 
 3. **<ins>open audio sound:</ins>**
-  - alsamixer
+	  - alsamixer
 
 4.  **<ins>Copy folder from pi to pc:</ins>**
-  - scp -r pi@192.168.68.150:~/MUSICAL_DOOR_BELL /C:\Users\PC\Documents\Python\MUSICAL_DOOR_BELL_OUTDOOR
+	  - scp -r pi@192.168.68.150:~/MUSICAL_DOOR_BELL /C:\Users\PC\Documents\Python\MUSICAL_DOOR_BELL_OUTDOOR
 
 5.  **<ins>Copy file from pi to pc:</ins>**
-  - scp pi@192.168.68.150:~/MUSICAL_DOOR_BELL/main.py /C:\Users\PC\Documents\Python\MUSICAL_DOOR_BELL_OUTDOOR
+	  - scp pi@192.168.68.150:~/MUSICAL_DOOR_BELL/main.py /C:\Users\PC\Documents\Python\MUSICAL_DOOR_BELL_OUTDOOR
 
 6. **<ins>Add you script at startup:</ins>**
   - Run this command:
