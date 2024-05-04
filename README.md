@@ -73,7 +73,7 @@
 	-  disable gnome extensions : gnome-extensions disable hanabi-extension@jeffshee.github.io (Ctrl + Alt + L)
 	
 2. Update Swap for hibernation.
-	-  <code style="color:#FFD700;">sudo</code> nano /etc/fstab  
+	-  ```<code style="color:#FFD700;">sudo</code> nano /etc/fstab```  
 		  add this : UUID= < UUID >          none            swap    sw              0       0
 	-  <font color="#2DC26B">sudo</font> nano /etc/default/grub 
 		  edit this : GRUB_CMDLINE_LINUX="... resume=UUID=< UUID >"
