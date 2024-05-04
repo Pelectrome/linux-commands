@@ -1,7 +1,7 @@
 # Linux-commands
 
                           
- <div><h3>Raspberry pi:</h3><p align="right"><img height="40px" src="https://www.vectorlogo.zone/logos/raspberrypi/raspberrypi-icon.svg" alt=""/></p></div>
+ <div><h3 style="display: inline-block">Raspberry pi:</h3><p style="display: inline-block"><img height="40px" src="https://www.vectorlogo.zone/logos/raspberrypi/raspberrypi-icon.svg" alt=""/></p></div>
  
 1. **<ins>Globale install for opencv:</ins>**
 ```shell
