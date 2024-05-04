@@ -62,6 +62,7 @@
 
 
 ## Linux:
+```css
  1. keyboard shortcuts  : 
 	-  hibernate : sudo systemctl hibernate (Shift + Alt + H)
 	-  new-window : nautilus --new-window (Super + E)
@@ -84,6 +85,6 @@
 	-  <font color="#2DC26B">sudo</font> visudo
 	  Add the following line at the end of the file : < username > ALL=(ALL) NOPASSWD: /sbin/shutdown 
 		  ps: you can get command path by using whereis shutdown or other commands
-
+```
  
 
