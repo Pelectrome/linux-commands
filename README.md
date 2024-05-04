@@ -38,29 +38,53 @@ scp pi@192.168.68.150:~/MUSICAL_DOOR_BELL/main.py /C:\Users\PC\Documents\Python\
 ```
 
 5. **<ins>Add you script at startup:</ins>**
-	  - Run this command:
-	    - `sudo crontab -e`
-	  - Add this to the end:
-	    - @reboot python3 /home/pi/MUSICAL_DOOR_BELL/main.py &
-	  - If you want to add logfile:
-	    - @reboot sudo /usr/bin/python3 /home/pi/MUSICAL_DOOR_BELL/main.py > /home/pi/MUSICAL_DOOR_BELL/logfile.log 2>&1 &
-	  - Better way to run on startup script:
-	    - sudo nano /etc/rc.local
-	    - If you want delay
-	      - sleep 30
-	    - su -c "python3 /path/to/your/script.py > /path/to/your/logfile.log 2>&1" pi &
-	    - sudo chmod +x /etc/rc.local
+```shell
+sudo crontab -e
+```
+- Add this to the end:(example)
+```
+@reboot python3 /home/pi/MUSICAL_DOOR_BELL/main.py &
+```
+  - If you want to add logfile:(example)
+```shell
+  @reboot sudo /usr/bin/python3 /home/pi/MUSICAL_DOOR_BELL/main.py > /home/pi/MUSICAL_DOOR_BELL/logfile.log 2>&1 &
+```
+  - Better way to run on startup script:
+```shell
+sudo nano /etc/rc.local
+```
+- If you want delay
+```shell
+sleep 30
+```
+- Add this to the end:(example)
+```shell
+su -c "python3 /path/to/your/script.py > /path/to/your/logfile.log 2>&1" pi &
+```
+- Update permission:
+```shell
+sudo chmod +x /etc/rc.local
+```
 
-6. **<ins>Run app with UI in startup use this:</ins>**
-	  - sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
-	  - Add this in the end:
-	    - @/usr/bin/python /home/pi/example.py
+2. **<ins>Run app with UI in startup use this:</ins>**
+```shell
+sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
+```
+- Add this in the end:(example)
+```shell
+@/usr/bin/python /home/pi/example.py
+```
 
-7. **<ins>Hide the taskbar command this line:</ins>**
-	  - sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
-	  - #@lxpanel --profile LXDE-pi (command this line)
+3. **<ins>Hide the taskbar command this line:</ins>**
+```shell
+sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
+```
+- Command this line:
+```shell
+#@lxpanel --profile LXDE-pi
+```
 
-8. **<ins>Chnage splash screen:</ins>**
+4. **<ins>Chnage splash screen:</ins>**
 	  - first change the splash image in what you like in this dir:
 	  - /usr/share/plymouth/themes/pix
 	  - then run this command:
