@@ -1,7 +1,10 @@
 # Linux-commands
 
-## Raspberry pi:                                
- <p align="right"><img height="40px" src="https://www.vectorlogo.zone/logos/raspberrypi/raspberrypi-icon.svg" alt=""/></p>
+<div style="display: flex; justify-content: space-between;">
+ <h3 style="float: left;">Raspberry pi:</h3>
+<div style="float: right;"><img height="40px" src="https://www.vectorlogo.zone/logos/raspberrypi/raspberrypi-icon.svg" alt=""/></div>                 
+</div>
+
 1. **<ins>Globale install for opencv:</ins>**
 ```shell
 sudo apt install python3-opencv
