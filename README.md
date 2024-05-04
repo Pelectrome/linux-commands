@@ -25,17 +25,19 @@ pip install opencv-python --verbose
 alsamixer
 ```
 
-2.  **<ins>Copy folder from pi to pc:</ins>**
+2.  **<ins>Copy folder from pi to pc:</ins>**(example)
 ```
 scp -r pi@192.168.68.150:~/MUSICAL_DOOR_BELL /C:\Users\PC\Documents\Python\MUSICAL_DOOR_BELL_OUTDOOR
 ```
 
-4.  **<ins>Copy file from pi to pc:</ins>**
-`scp pi@192.168.68.150:~/MUSICAL_DOOR_BELL/main.py /C:\Users\PC\Documents\Python\MUSICAL_DOOR_BELL_OUTDOOR`
+4.  **<ins>Copy file from pi to pc:</ins>**(example)
+```
+scp pi@192.168.68.150:~/MUSICAL_DOOR_BELL/main.py /C:\Users\PC\Documents\Python\MUSICAL_DOOR_BELL_OUTDOOR
+```
 
 5. **<ins>Add you script at startup:</ins>**
 	  - Run this command:
-	    - sudo crontab -e
+	    - `sudo crontab -e`
 	  - Add this to the end:
 	    - @reboot python3 /home/pi/MUSICAL_DOOR_BELL/main.py &
 	  - If you want to add logfile:
