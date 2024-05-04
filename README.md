@@ -1,7 +1,7 @@
 # Linux-commands
 
 ## Raspberry pi:
-`$${\color{green}Green}$$`
+$${\color{green}Green}$$
 
 1. **<ins>Globale install for opencv:</ins>**
 ```shell
