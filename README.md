@@ -1,4 +1,4 @@
-# linux-commands
+# Linux-commands
 
 ## Raspberry pi:
 
@@ -58,3 +58,31 @@
   - Run this command:
     - export DISPLAY=:0
   - Now you can run the script
+
+
+## Linux:
+ 1. keyboard shortcuts  : 
+	-  hibernate : sudo systemctl hibernate (Shift + Alt + H)
+	-  new-window : nautilus --new-window (Super + E)
+	-  reboot : sudo reboot now (Shit + Alt + R)
+	-  shutdown : sudo shutdown now (Shit + Alt + S)
+	-  open terminal : gnome-terminal (Ctrl + Alt + T)
+	-  enable gnome extensions : gnome-extensions enable hanabi-extension@jeffshee.github.io (Ctrl + Alt + L)
+	-  disable gnome extensions : gnome-extensions disable hanabi-extension@jeffshee.github.io (Ctrl + Alt + L)
+	
+2. Update Swap for hibernation.
+	-  <font color="#2DC26B">sudo</font> nano /etc/fstab  
+		  add this : UUID= < UUID >          none            swap    sw              0       0
+	-  <font color="#2DC26B">sudo</font> nano /etc/default/grub 
+		  edit this : GRUB_CMDLINE_LINUX="... resume=UUID=< UUID >"
+	-  <font color="#2DC26B">sudo</font> update-grub
+	-  <font color="#2DC26B">sudo</font> nano /etc/initramfs-tools/conf.d/resume
+		  edit this : RESUME=UUID=< UUID >
+	-  <font color="#2DC26B">sudo</font> update-initramfs -u
+3. allow users to run commands without entering a password : 
+	-  <font color="#2DC26B">sudo</font> visudo
+	  Add the following line at the end of the file : < username > ALL=(ALL) NOPASSWD: /sbin/shutdown 
+		  ps: you can get command path by using whereis shutdown or other commands
+
+ 
+
