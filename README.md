@@ -2,7 +2,7 @@
 
 <div style="display: flex; justify-content: space-between;">
  <h3 style="float: left;">Raspberry pi:</h3>
-<div style="float: right;"><img height="40px" src="https://www.vectorlogo.zone/logos/raspberrypi/raspberrypi-icon.svg" alt=""/></div>                 
+<img height="40px" src="https://www.vectorlogo.zone/logos/raspberrypi/raspberrypi-icon.svg" alt=""/>                
 </div>
 
 1. **<ins>Globale install for opencv:</ins>**
