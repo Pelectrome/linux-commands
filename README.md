@@ -4,7 +4,7 @@
 
 1. **<ins>Globale install for opencv:</ins>**
 ```
-		sudo apt install python3-opencv
+sudo apt install python3-opencv
 ```
 
 3. <ins>**venv opencv install opencv:**</ins>
@@ -14,7 +14,7 @@ pip install --upgrade pip
 ```
 pip install opencv-python
 ```
-	To track the process:
+- To track the process:
 ```
 pip install opencv-python --verbose 
 ``` 
