@@ -1,7 +1,8 @@
 # Linux-commands
 
-                          
- <div><h3 style="display: inline-block">Raspberry pi:</h3><p style="display: inline-block"><img height="40px" src="https://www.vectorlogo.zone/logos/raspberrypi/raspberrypi-icon.svg" alt=""/></p></div>
+---
+## Raspberry pi: <img height="40px" align="right" src="https://www.vectorlogo.zone/logos/raspberrypi/raspberrypi-icon.svg" alt=""/>                          
+
  
 1. **<ins>Globale install for opencv:</ins>**
 ```shell
@@ -9,20 +10,20 @@ sudo apt install python3-opencv
 ```
 
 3. <ins>**venv opencv install opencv:**</ins>
-```
+```shell
 pip install --upgrade pip
 ```
-```
+```shell
 pip install opencv-python
 ```
 - To track the process:
-```
+```shell
 pip install opencv-python --verbose 
 ``` 
 
 		
 1. **<ins>open audio sound:</ins>**
-```
+```shell
 alsamixer
 ```
 
