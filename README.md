@@ -21,15 +21,19 @@ pip install opencv-python --verbose
 
 		
 1. **<ins>open audio sound:</ins>**
-	  - alsamixer
+```
+alsamixer
+```
 
 2.  **<ins>Copy folder from pi to pc:</ins>**
-	  - scp -r pi@192.168.68.150:~/MUSICAL_DOOR_BELL /C:\Users\PC\Documents\Python\MUSICAL_DOOR_BELL_OUTDOOR
+```
+scp -r pi@192.168.68.150:~/MUSICAL_DOOR_BELL /C:\Users\PC\Documents\Python\MUSICAL_DOOR_BELL_OUTDOOR
+```
 
-3.  **<ins>Copy file from pi to pc:</ins>**
-	  - scp pi@192.168.68.150:~/MUSICAL_DOOR_BELL/main.py /C:\Users\PC\Documents\Python\MUSICAL_DOOR_BELL_OUTDOOR
+4.  **<ins>Copy file from pi to pc:</ins>**
+`scp pi@192.168.68.150:~/MUSICAL_DOOR_BELL/main.py /C:\Users\PC\Documents\Python\MUSICAL_DOOR_BELL_OUTDOOR`
 
-4. **<ins>Add you script at startup:</ins>**
+5. **<ins>Add you script at startup:</ins>**
 	  - Run this command:
 	    - sudo crontab -e
 	  - Add this to the end:
@@ -43,16 +47,16 @@ pip install opencv-python --verbose
 	    - su -c "python3 /path/to/your/script.py > /path/to/your/logfile.log 2>&1" pi &
 	    - sudo chmod +x /etc/rc.local
 
-5. **<ins>Run app with UI in startup use this:</ins>**
+6. **<ins>Run app with UI in startup use this:</ins>**
 	  - sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
 	  - Add this in the end:
 	    - @/usr/bin/python /home/pi/example.py
 
-6. **<ins>Hide the taskbar command this line:</ins>**
+7. **<ins>Hide the taskbar command this line:</ins>**
 	  - sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
 	  - #@lxpanel --profile LXDE-pi (command this line)
 
-7. **<ins>Chnage splash screen:</ins>**
+8. **<ins>Chnage splash screen:</ins>**
 	  - first change the splash image in what you like in this dir:
 	  - /usr/share/plymouth/themes/pix
 	  - then run this command:
