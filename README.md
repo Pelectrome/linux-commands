@@ -76,27 +76,27 @@
 </details>
  <details>
  <summary><ins>Chnage splash screen:</ins></summary>
-  <div>🔹first change the splash image in what you like in this dir:
+  <div>✴ first change the splash image in what you like in this dir:
 	<ul>/usr/share/plymouth/themes/pix</ul>
 </div>
-🔹then run this command:
+✴ Then run this command:
 <pre><code class="language-shell">sudo plymouth-set-default-theme --rebuild-initrd pix
 </code></pre> 
-<div>🔹Disable rainbow splash:
+<div>✴ Disable rainbow splash:
 	<ul>Add or edit this line:</ul>
 </div>
 <pre><code class="language-shell">disable_splash=1 to /boot/config.txt
 </code></pre> 
-🔹To remove the blinking curse add this:
+✴ To remove the blinking curse add this:
 <pre><code class="language-shell">vt.global_cursor_default=0 
 </code></pre> 
-🔹To:
+✴ To:
 <pre><code class="language-shell">/boot/cmdline.txt
 </code></pre> 
-🔹Mute kernel logs (only show critical errors) Add:
+✴ Mute kernel logs (only show critical errors) Add:
 <pre><code class="language-shell">loglevel=3
 </code></pre> 
-🔹To:
+✴ To:
 <pre><code class="language-shell">/boot/cmdline.txt 
 </code></pre> 
 </details>
