@@ -4,12 +4,12 @@
 ## Raspberry pi: <img height="40px" align="right" src="https://www.vectorlogo.zone/logos/raspberrypi/raspberrypi-icon.svg" alt=""/>                          
 
  
-1. **<ins>Globale install for opencv:</ins>**
+> **<ins>Globale install for opencv:</ins>**
 ```shell
 sudo apt install python3-opencv
 ```
 
-3. <ins>**venv opencv install opencv:**</ins>
+> <ins>**venv opencv install opencv:**</ins>
 ```shell
 pip install --upgrade pip
 ```
