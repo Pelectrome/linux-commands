@@ -29,20 +29,16 @@ pip install opencv-python
 pip install opencv-python --verbose 
 ``` 
 </details>
-
-#### **<ins>Open audio sound:</ins>**
  <details>
- <summary>Details</summary>
+ <summary><ins>Open audio sound:</ins></summary>
 
 
 ```shell
 alsamixer
 ```
 </details>
-
-#### **<ins>Copy folder from pi to pc:</ins>**(example)
  <details>
- <summary>Details</summary>
+ <summary><ins>Copy folder from pi to pc:</ins>(example)</summary>
 
 
 ```shell
