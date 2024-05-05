@@ -49,7 +49,7 @@ sudo crontab -e
   @reboot sudo /usr/bin/python3 /home/pi/MUSICAL_DOOR_BELL/main.py > /home/pi/MUSICAL_DOOR_BELL/logfile.log 2>&1 &
 ```
 
-#### **<ins>Better way to run on startup script:</ins>
+#### **<ins>Better way to run on startup script:</ins>**
 ```shell
 sudo nano /etc/rc.local
 ```
@@ -91,30 +91,31 @@ sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
 ```shell
 sudo plymouth-set-default-theme --rebuild-initrd pix
 ```
-  - Disable rainbow splash:
+- Disable rainbow splash:
 	- Add or edit this line:
-	```shell
+```shell
 disable_splash=1 to /boot/config.txt
 ```
-- To remove the blinking curse add this:
+To remove the blinking curse add this:
 ```shell
 vt.global_cursor_default=0 to /boot/cmdline.txt
 ```
-  - Mute kernel logs (only show critical errors):
-	- In:
-	```shell
+- Mute kernel logs (only show critical errors):
+- In: 
+```shell
 /boot/cmdline.txt
 ```
-	- Add:
-	```shell
-loglevel=3 
+- Add:
+```shell
+loglevel=3
 ```
 
-	    
 #### **<ins>Run GUI script from SSH:</ins>**
-	  - Run this command:
-	    - export DISPLAY=:0
-	  - Now you can run the script
+- Run this command:
+```shell
+export DISPLAY=:0
+```
+- Now you can run the script
 
 ---
 ## Linux:<img height="40px" align="right" src="https://www.debian.org/logos/openlogo-nd.svg" alt=""/>    
