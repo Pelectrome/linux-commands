@@ -20,135 +20,92 @@
 </details>
  <details>
  <summary><ins>Open audio sound:</ins></summary>
-
-
-```shell
-alsamixer
-```
+<pre><code class="language-shell">alsamixer
+</code></pre> 
 </details>
  <details>
  <summary><ins>Copy folder from pi to pc:</ins>(example)</summary>
-
-
-```shell
-scp -r pi@192.168.68.150:~/MUSICAL_DOOR_BELL /C:\Users\PC\Documents\Python\MUSICAL_DOOR_BELL_OUTDOOR
-```
+<pre><code class="language-shell">scp -r pi@192.168.68.150:~/MUSICAL_DOOR_BELL /C:\Users\PC\Documents\Python\MUSICAL_DOOR_BELL_OUTDOOR
+</code></pre> 
 </details>
  <details>
  <summary><ins>Copy file from pi to pc:</ins>(example)</summary>
-
-
-```shell
-scp pi@192.168.68.150:~/MUSICAL_DOOR_BELL/main.py /C:\Users\PC\Documents\Python\MUSICAL_DOOR_BELL_OUTDOOR
-```
+<pre><code class="language-shell">scp pi@192.168.68.150:~/MUSICAL_DOOR_BELL/main.py /C:\Users\PC\Documents\Python\MUSICAL_DOOR_BELL_OUTDOOR
+</code></pre> 
  </details>
  <details>
  <summary><ins>Add you script at startup:</ins></summary>
-
-
-```shell
-sudo crontab -e
-```
+<pre><code class="language-shell">sudo crontab -e
+</code></pre> 
 - Add this to the end:(example)
-```shell
-@reboot python3 /home/pi/MUSICAL_DOOR_BELL/main.py &
-```
+<pre><code class="language-shell">@reboot python3 /home/pi/MUSICAL_DOOR_BELL/main.py &
+</code></pre> 
   - If you want to add log-file:(example)
-```shell
-  @reboot sudo /usr/bin/python3 /home/pi/MUSICAL_DOOR_BELL/main.py > /home/pi/MUSICAL_DOOR_BELL/logfile.log 2>&1 &
-```
-
+<pre><code class="language-shell">@reboot sudo /usr/bin/python3 /home/pi/MUSICAL_DOOR_BELL/main.py > /home/pi/MUSICAL_DOOR_BELL/logfile.log 2>&1 &
+</code></pre> 
 </details>
  <details>
  <summary><ins>Better way to run on startup script:</ins></summary>
-
-
-```shell
-sudo nano /etc/rc.local
-```
+<pre><code class="language-shell">sudo nano /etc/rc.local
+</code></pre> 
 - If you want delay
-```shell
-sleep 30
-```
+<pre><code class="language-shell">sleep 30
+</code></pre> 
 - Add this to the end:(example)
-```shell
-su -c "python3 /path/to/your/script.py > /path/to/your/logfile.log 2>&1" pi &
-```
+<pre><code class="language-shell">su -c "python3 /path/to/your/script.py > /path/to/your/logfile.log 2>&1" pi &
+</code></pre> 
 - Update permission:
-```shell
-sudo chmod +x /etc/rc.local
-```
+<pre><code class="language-shell">sudo chmod +x /etc/rc.local
+</code></pre> 
 </details>
  <details>
  <summary><ins>Run app with UI in startup use this:</ins></summary>
-
-
-```shell
-sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
-```
+<pre><code class="language-shell">sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
+</code></pre> 
 - Add this in the end:(example)
-```shell
-@/usr/bin/python /home/pi/example.py
-```
+<pre><code class="language-shell">@/usr/bin/python /home/pi/example.py
+</code></pre> 
 </details>
  <details>
  <summary><ins>Hide the taskbar command this line:</ins></summary>
-
-
-```shell
-sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
-```
+<pre><code class="language-shell">sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
+</code></pre> 
 - Command this line:
-```shell
-#@lxpanel --profile LXDE-pi
-```
+<pre><code class="language-shell">#@lxpanel --profile LXDE-pi
+</code></pre> 
 </details>
  <details>
  <summary><ins>Chnage splash screen:</ins></summary>
-
-
 - first change the splash image in what you like in this dir:
   - /usr/share/plymouth/themes/pix
   - then run this command:
-```shell
-sudo plymouth-set-default-theme --rebuild-initrd pix
-```
+<pre><code class="language-shell">sudo plymouth-set-default-theme --rebuild-initrd pix
+</code></pre> 
 - Disable rainbow splash:
 	- Add or edit this line:
-```shell
-disable_splash=1 to /boot/config.txt
-```
+<pre><code class="language-shell">disable_splash=1 to /boot/config.txt
+</code></pre> 
 - To remove the blinking curse add this:
-```shell
-vt.global_cursor_default=0 
-```
+<pre><code class="language-shell">vt.global_cursor_default=0 
+</code></pre> 
 - To:
-```shell
-/boot/cmdline.txt
-```
+<pre><code class="language-shell">/boot/cmdline.txt
+</code></pre> 
 - Mute kernel logs (only show critical errors) Add:
-```shell
-loglevel=3
-```
+<pre><code class="language-shell">loglevel=3
+</code></pre> 
 - To:
-```shell
-/boot/cmdline.txt 
-```
+<pre><code class="language-shell">/boot/cmdline.txt 
+</code></pre> 
 </details>
  <details>
  <summary><ins>Run GUI script from SSH:</ins></summary>
-
-
 - Run this command:
-```shell
-export DISPLAY=:0
-```
+<pre><code class="language-shell">export DISPLAY=:0
+</code></pre> 
 - Now you can run the script
 </details>
 
-```shell
-sudo apt update
-```
 ---
 ## Linux:<img height="40px" align="right" src="https://www.debian.org/logos/openlogo-nd.svg" alt=""/>    
 
