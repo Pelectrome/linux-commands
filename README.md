@@ -45,20 +45,16 @@ alsamixer
 scp -r pi@192.168.68.150:~/MUSICAL_DOOR_BELL /C:\Users\PC\Documents\Python\MUSICAL_DOOR_BELL_OUTDOOR
 ```
 </details>
-
-#### **<ins>Copy file from pi to pc:</ins>**(example)
  <details>
- <summary>Details</summary>
+ <summary><ins>Copy file from pi to pc:</ins>(example)</summary>
 
 
 ```shell
 scp pi@192.168.68.150:~/MUSICAL_DOOR_BELL/main.py /C:\Users\PC\Documents\Python\MUSICAL_DOOR_BELL_OUTDOOR
 ```
  </details>
-
-#### **<ins>Add you script at startup:</ins>**
  <details>
- <summary>Details</summary>
+ <summary><ins>Add you script at startup:</ins></summary>
 
 
 ```shell
@@ -74,10 +70,8 @@ sudo crontab -e
 ```
 
 </details>
-
-#### **<ins>Better way to run on startup script:</ins>**
  <details>
- <summary>Details</summary>
+ <summary><ins>Better way to run on startup script:</ins></summary>
 
 
 ```shell
@@ -96,10 +90,8 @@ su -c "python3 /path/to/your/script.py > /path/to/your/logfile.log 2>&1" pi &
 sudo chmod +x /etc/rc.local
 ```
 </details>
-
-#### **<ins>Run app with UI in startup use this:</ins>**
  <details>
- <summary>Details</summary>
+ <summary><ins>Run app with UI in startup use this:</ins></summary>
 
 
 ```shell
@@ -110,10 +102,8 @@ sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
 @/usr/bin/python /home/pi/example.py
 ```
 </details>
-
-#### **<ins>Hide the taskbar command this line:</ins>**
  <details>
- <summary>Details</summary>
+ <summary><ins>Hide the taskbar command this line:</ins></summary>
 
 
 ```shell
@@ -124,10 +114,8 @@ sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
 #@lxpanel --profile LXDE-pi
 ```
 </details>
-
-#### **<ins>Chnage splash screen:</ins>**
  <details>
- <summary>Details</summary>
+ <summary><ins>Chnage splash screen:</ins></summary>
 
 
 - first change the splash image in what you like in this dir:
@@ -158,10 +146,8 @@ loglevel=3
 /boot/cmdline.txt 
 ```
 </details>
-
-#### **<ins>Run GUI script from SSH:</ins>**
  <details>
- <summary>Details</summary>
+ <summary><ins>Run GUI script from SSH:</ins></summary>
 
 
 - Run this command:
