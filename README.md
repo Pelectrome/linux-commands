@@ -96,18 +96,21 @@ sudo plymouth-set-default-theme --rebuild-initrd pix
 ```shell
 disable_splash=1 to /boot/config.txt
 ```
-To remove the blinking curse add this:
+- To remove the blinking curse add this:
 ```shell
-vt.global_cursor_default=0 to /boot/cmdline.txt
+vt.global_cursor_default=0 
 ```
-- Mute kernel logs (only show critical errors):
-- In: 
+- To:
 ```shell
 /boot/cmdline.txt
 ```
-- Add:
+- Mute kernel logs (only show critical errors) Add:
 ```shell
 loglevel=3
+```
+- To:
+```shell
+/boot/cmdline.txt 
 ```
 
 #### **<ins>Run GUI script from SSH:</ins>**
