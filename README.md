@@ -5,27 +5,21 @@
 
 <details>    
 <summary><ins>Globale install for opencv:</ins></summary>    
-<pre><code class="language-shell"> 
-sudo apt install python3-opencv     
+<pre><code class="language-shell"> sudo apt install python3-opencv     
 </code></pre> 
 </details>
  <details>
  <summary><ins>venv install opencv:</ins></summary>
+<pre><code class="language-shell"> pip install --upgrade pip
+</code></pre> 
 
-
-```shell
-pip install --upgrade pip
-```
-
-```shell
-pip install opencv-python
-```
+<pre><code class="language-shell"> pip install opencv-python
+</code></pre> 
 
 - To track the process:
 
-```shell
-pip install opencv-python --verbose 
-``` 
+<pre><code class="language-shell"> pip install opencv-python --verbose 
+</code></pre> 
 </details>
  <details>
  <summary><ins>Open audio sound:</ins></summary>
