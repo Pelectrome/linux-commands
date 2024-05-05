@@ -3,8 +3,10 @@
 ---
 ## Raspberry pi: <img height="40px" align="right" src="https://www.vectorlogo.zone/logos/raspberrypi/raspberrypi-icon.svg" alt=""/>                          
 
+<details>     <summary><ins>Globale install for opencv:</ins></summary>     <pre><code class="language-shell"> sudo apt install python3-opencv     </code></pre>     <button onclick="copyCode()">Copy</button> </details>  <script>     function copyCode() {         var code = document.querySelector('code');         var selection = window.getSelection();         var range = document.createRange();         range.selectNodeContents(code);         selection.removeAllRanges();         selection.addRange(range);         document.execCommand('copy');         selection.removeAllRanges();         alert('Code copied to clipboard!');     } </script>
  <details>
  <summary><ins>Globale install for opencv:</ins></summary>
+
 
 
 ```shell
@@ -157,6 +159,9 @@ export DISPLAY=:0
 - Now you can run the script
 </details>
 
+```shell
+sudo apt update
+```
 ---
 ## Linux:<img height="40px" align="right" src="https://www.debian.org/logos/openlogo-nd.svg" alt=""/>    
 
