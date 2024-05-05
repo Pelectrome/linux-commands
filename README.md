@@ -102,7 +102,7 @@
 </details>
  <details>
  <summary><ins>Run GUI script from SSH:</ins></summary>
-🔹Run this command:
+👉 Run this command:
 <pre><code class="language-shell">export DISPLAY=:0
 </code></pre> 
 🔹Now you can run the script
