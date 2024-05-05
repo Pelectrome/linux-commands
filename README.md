@@ -7,15 +7,16 @@
  <details>
  <summary>Details</summary>
 
+
 ```shell
 sudo apt install python3-opencv
-```
-
+``
 </details>
 
 #### **<ins>venv opencv install opencv:</ins>**
  <details>
  <summary>Details</summary>
+
 
 ```shell
 pip install --upgrade pip
@@ -30,13 +31,13 @@ pip install opencv-python
 ```shell
 pip install opencv-python --verbose 
 ``` 
-
 </details>
 
 #### **<ins>Open audio sound:</ins>**
  <details>
  <summary>Details</summary>
- 
+
+
 ```shell
 alsamixer
 ```
@@ -45,8 +46,9 @@ alsamixer
 #### **<ins>Copy folder from pi to pc:</ins>**(example)
  <details>
  <summary>Details</summary>
- 
-```
+
+
+```shell
 scp -r pi@192.168.68.150:~/MUSICAL_DOOR_BELL /C:\Users\PC\Documents\Python\MUSICAL_DOOR_BELL_OUTDOOR
 ```
 </details>
@@ -54,8 +56,9 @@ scp -r pi@192.168.68.150:~/MUSICAL_DOOR_BELL /C:\Users\PC\Documents\Python\MUSIC
 #### **<ins>Copy file from pi to pc:</ins>**(example)
  <details>
  <summary>Details</summary>
- 
-```
+
+
+```shell
 scp pi@192.168.68.150:~/MUSICAL_DOOR_BELL/main.py /C:\Users\PC\Documents\Python\MUSICAL_DOOR_BELL_OUTDOOR
 ```
  </details>
@@ -63,7 +66,8 @@ scp pi@192.168.68.150:~/MUSICAL_DOOR_BELL/main.py /C:\Users\PC\Documents\Python\
 #### **<ins>Add you script at startup:</ins>**
  <details>
  <summary>Details</summary>
- 
+
+
 ```shell
 sudo crontab -e
 ```
@@ -75,12 +79,14 @@ sudo crontab -e
 ```shell
   @reboot sudo /usr/bin/python3 /home/pi/MUSICAL_DOOR_BELL/main.py > /home/pi/MUSICAL_DOOR_BELL/logfile.log 2>&1 &
 ```
+
 </details>
 
 #### **<ins>Better way to run on startup script:</ins>**
  <details>
  <summary>Details</summary>
- 
+
+
 ```shell
 sudo nano /etc/rc.local
 ```
@@ -101,7 +107,8 @@ sudo chmod +x /etc/rc.local
 #### **<ins>Run app with UI in startup use this:</ins>**
  <details>
  <summary>Details</summary>
- 
+
+
 ```shell
 sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
 ```
@@ -114,7 +121,8 @@ sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
 #### **<ins>Hide the taskbar command this line:</ins>**
  <details>
  <summary>Details</summary>
- 
+
+
 ```shell
 sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
 ```
@@ -127,7 +135,8 @@ sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
 #### **<ins>Chnage splash screen:</ins>**
  <details>
  <summary>Details</summary>
- 
+
+
 - first change the splash image in what you like in this dir:
   - /usr/share/plymouth/themes/pix
   - then run this command:
@@ -160,7 +169,8 @@ loglevel=3
 #### **<ins>Run GUI script from SSH:</ins>**
  <details>
  <summary>Details</summary>
- 
+
+
 - Run this command:
 ```shell
 export DISPLAY=:0
