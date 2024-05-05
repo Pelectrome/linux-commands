@@ -6,9 +6,11 @@
 #### **<ins>Globale install for opencv:</ins>**
  <details>
  <summary>Details</summary>
+ 
 ```shell
 sudo apt install python3-opencv
 ```
+
 </details>
 
 #### **<ins>venv opencv install opencv:</ins>**
