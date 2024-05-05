@@ -14,7 +14,7 @@
 </code></pre> 
 <pre><code class="language-shell"> pip install opencv-python
 </code></pre> 
-• To track the process:
+🔹To track the process:
 <pre><code class="language-shell"> pip install opencv-python --verbose 
 </code></pre> 
 </details>
@@ -37,10 +37,10 @@
  <summary><ins>Add you script at startup:</ins></summary>
 <pre><code class="language-shell">sudo crontab -e
 </code></pre> 
-- Add this to the end:(example)
+🔹Add this to the end:(example)
 <pre><code class="language-shell">@reboot python3 /home/pi/MUSICAL_DOOR_BELL/main.py &
 </code></pre> 
-  - If you want to add log-file:(example)
+🔹If you want to add log-file:(example)
 <pre><code class="language-shell">@reboot sudo /usr/bin/python3 /home/pi/MUSICAL_DOOR_BELL/main.py > /home/pi/MUSICAL_DOOR_BELL/logfile.log 2>&1 &
 </code></pre> 
 </details>
@@ -48,13 +48,13 @@
  <summary><ins>Better way to run on startup script:</ins></summary>
 <pre><code class="language-shell">sudo nano /etc/rc.local
 </code></pre> 
-- If you want delay
+🔹If you want delay
 <pre><code class="language-shell">sleep 30
 </code></pre> 
-- Add this to the end:(example)
+🔹Add this to the end:(example)
 <pre><code class="language-shell">su -c "python3 /path/to/your/script.py > /path/to/your/logfile.log 2>&1" pi &
 </code></pre> 
-- Update permission:
+🔹Update permission:
 <pre><code class="language-shell">sudo chmod +x /etc/rc.local
 </code></pre> 
 </details>
@@ -62,7 +62,7 @@
  <summary><ins>Run app with UI in startup use this:</ins></summary>
 <pre><code class="language-shell">sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
 </code></pre> 
-- Add this in the end:(example)
+🔹Add this in the end:(example)
 <pre><code class="language-shell">@/usr/bin/python /home/pi/example.py
 </code></pre> 
 </details>
@@ -70,40 +70,40 @@
  <summary><ins>Hide the taskbar command this line:</ins></summary>
 <pre><code class="language-shell">sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
 </code></pre> 
-- Command this line:
+🔹Command this line:
 <pre><code class="language-shell">#@lxpanel --profile LXDE-pi
 </code></pre> 
 </details>
  <details>
  <summary><ins>Chnage splash screen:</ins></summary>
-- first change the splash image in what you like in this dir:
-  - /usr/share/plymouth/themes/pix
-  - then run this command:
+🔹first change the splash image in what you like in this dir:
+<br>🔸/usr/share/plymouth/themes/pix
+<br>🔸then run this command:
 <pre><code class="language-shell">sudo plymouth-set-default-theme --rebuild-initrd pix
 </code></pre> 
-- Disable rainbow splash:
-	- Add or edit this line:
+🔹Disable rainbow splash:
+<br>🔸Add or edit this line:
 <pre><code class="language-shell">disable_splash=1 to /boot/config.txt
 </code></pre> 
-- To remove the blinking curse add this:
+🔹To remove the blinking curse add this:
 <pre><code class="language-shell">vt.global_cursor_default=0 
 </code></pre> 
-- To:
+🔹To:
 <pre><code class="language-shell">/boot/cmdline.txt
 </code></pre> 
-- Mute kernel logs (only show critical errors) Add:
+🔹Mute kernel logs (only show critical errors) Add:
 <pre><code class="language-shell">loglevel=3
 </code></pre> 
-- To:
+🔹To:
 <pre><code class="language-shell">/boot/cmdline.txt 
 </code></pre> 
 </details>
  <details>
  <summary><ins>Run GUI script from SSH:</ins></summary>
-- Run this command:
+🔹Run this command:
 <pre><code class="language-shell">export DISPLAY=:0
 </code></pre> 
-- Now you can run the script
+🔹Now you can run the script
 </details>
 
 ---
