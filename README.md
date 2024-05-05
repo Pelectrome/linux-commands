@@ -5,7 +5,8 @@
 
 <details>    
 <summary><ins>Globale install for opencv:</ins></summary>    
-<pre><code class="language-shell"> sudo apt install python3-opencv     
+<pre><code class="language-shell"> 
+sudo apt install python3-opencv     
 </code></pre> 
 </details>
  <details>
