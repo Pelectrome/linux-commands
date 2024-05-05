@@ -7,25 +7,30 @@
  <details>
  <summary>Details</summary>
 
-```shell<br>
+```shell
 sudo apt install python3-opencv
 ```
+
 </details>
 
 #### **<ins>venv opencv install opencv:</ins>**
  <details>
  <summary>Details</summary>
- 
+
 ```shell
 pip install --upgrade pip
 ```
+
 ```shell
 pip install opencv-python
 ```
+
 - To track the process:
+
 ```shell
 pip install opencv-python --verbose 
 ``` 
+
 </details>
 
 #### **<ins>Open audio sound:</ins>**
