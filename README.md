@@ -76,9 +76,10 @@
 </details>
  <details>
  <summary><ins>Chnage splash screen:</ins></summary>
-🔹first change the splash image in what you like in this dir:
-<br>🔸/usr/share/plymouth/themes/pix
-<br>🔸then run this command:
+  <ul>🔹first change the splash image in what you like in this dir:
+	<ul>🔸/usr/share/plymouth/themes/pix</ul>
+</ul>
+<ul>🔹then run this command:</ul>
 <pre><code class="language-shell">sudo plymouth-set-default-theme --rebuild-initrd pix
 </code></pre> 
 🔹Disable rainbow splash:
