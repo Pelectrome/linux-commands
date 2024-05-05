@@ -12,6 +12,7 @@ sudo apt install python3-opencv
 ```
 
 </details>
+
 #### **<ins>venv opencv install opencv:</ins>**
  <details>
  <summary>Details</summary>
@@ -28,6 +29,7 @@ pip install opencv-python --verbose
 ``` 
 
 </details>
+
 #### **<ins>Open audio sound:</ins>**
  <details>
  <summary>Details</summary>
@@ -36,6 +38,7 @@ pip install opencv-python --verbose
 alsamixer
 ```
 </details>
+
 #### **<ins>Copy folder from pi to pc:</ins>**(example)
 ```
 scp -r pi@192.168.68.150:~/MUSICAL_DOOR_BELL /C:\Users\PC\Documents\Python\MUSICAL_DOOR_BELL_OUTDOOR
