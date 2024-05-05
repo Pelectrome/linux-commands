@@ -14,7 +14,7 @@
 </code></pre> 
 <pre><code class="language-shell"> pip install opencv-python
 </code></pre> 
-* To track the process:
+• To track the process:
 <pre><code class="language-shell"> pip install opencv-python --verbose 
 </code></pre> 
 </details>
