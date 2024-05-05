@@ -12,12 +12,9 @@
  <summary><ins>venv install opencv:</ins></summary>
 <pre><code class="language-shell"> pip install --upgrade pip
 </code></pre> 
-
 <pre><code class="language-shell"> pip install opencv-python
 </code></pre> 
-
 - To track the process:
-
 <pre><code class="language-shell"> pip install opencv-python --verbose 
 </code></pre> 
 </details>
