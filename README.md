@@ -21,35 +21,35 @@ pip install opencv-python
 pip install opencv-python --verbose 
 ``` 
 
-		
-1. **<ins>open audio sound:</ins>**
+#### **<ins>Open audio sound:</ins>**
 ```shell
 alsamixer
 ```
 
-2.  **<ins>Copy folder from pi to pc:</ins>**(example)
+#### **<ins>Copy folder from pi to pc:</ins>**(example)
 ```
 scp -r pi@192.168.68.150:~/MUSICAL_DOOR_BELL /C:\Users\PC\Documents\Python\MUSICAL_DOOR_BELL_OUTDOOR
 ```
 
-4.  **<ins>Copy file from pi to pc:</ins>**(example)
+#### **<ins>Copy file from pi to pc:</ins>**(example)
 ```
 scp pi@192.168.68.150:~/MUSICAL_DOOR_BELL/main.py /C:\Users\PC\Documents\Python\MUSICAL_DOOR_BELL_OUTDOOR
 ```
 
-5. **<ins>Add you script at startup:</ins>**
+#### **<ins>Add you script at startup:</ins>**
 ```shell
 sudo crontab -e
 ```
 - Add this to the end:(example)
-```
+```shell
 @reboot python3 /home/pi/MUSICAL_DOOR_BELL/main.py &
 ```
-  - If you want to add logfile:(example)
+  - If you want to add log-file:(example)
 ```shell
   @reboot sudo /usr/bin/python3 /home/pi/MUSICAL_DOOR_BELL/main.py > /home/pi/MUSICAL_DOOR_BELL/logfile.log 2>&1 &
 ```
-  - Better way to run on startup script:
+
+#### **<ins>Better way to run on startup script:</ins>
 ```shell
 sudo nano /etc/rc.local
 ```
@@ -66,7 +66,7 @@ su -c "python3 /path/to/your/script.py > /path/to/your/logfile.log 2>&1" pi &
 sudo chmod +x /etc/rc.local
 ```
 
-2. **<ins>Run app with UI in startup use this:</ins>**
+#### **<ins>Run app with UI in startup use this:</ins>**
 ```shell
 sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
 ```
@@ -75,7 +75,7 @@ sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
 @/usr/bin/python /home/pi/example.py
 ```
 
-3. **<ins>Hide the taskbar command this line:</ins>**
+#### **<ins>Hide the taskbar command this line:</ins>**
 ```shell
 sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
 ```
@@ -84,20 +84,34 @@ sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
 #@lxpanel --profile LXDE-pi
 ```
 
-4. **<ins>Chnage splash screen:</ins>**
-	  - first change the splash image in what you like in this dir:
-	  - /usr/share/plymouth/themes/pix
-	  - then run this command:
-	    - sudo plymouth-set-default-theme --rebuild-initrd pix
-	  - Disable rainbow splash:
-	    - Add or edit this line:
-	      - disable_splash=1 to /boot/config.txt
-	  - To remove the blinking curser add this:
-	    - vt.global_cursor_default=0 to /boot/cmdline.txt
-	  - Mute kernel logs (only show critical errors):
-	    - Add loglevel=3 to the /boot/cmdline.txt
+#### **<ins>Chnage splash screen:</ins>**
+- first change the splash image in what you like in this dir:
+  - /usr/share/plymouth/themes/pix
+  - then run this command:
+```shell
+sudo plymouth-set-default-theme --rebuild-initrd pix
+```
+  - Disable rainbow splash:
+	- Add or edit this line:
+	```shell
+disable_splash=1 to /boot/config.txt
+```
+- To remove the blinking curse add this:
+```shell
+vt.global_cursor_default=0 to /boot/cmdline.txt
+```
+  - Mute kernel logs (only show critical errors):
+	- In:
+	```shell
+/boot/cmdline.txt
+```
+	- Add:
+	```shell
+loglevel=3 
+```
+
 	    
-10. **<ins>Run GUI script from SSH:</ins>**
+#### **<ins>Run GUI script from SSH:</ins>**
 	  - Run this command:
 	    - export DISPLAY=:0
 	  - Now you can run the script
