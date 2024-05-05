@@ -5,7 +5,7 @@
 
 #### **<ins>Globale install for opencv:</ins>**
  <details>
- <summary>#### **<ins>Globale install for opencv:</ins>**</summary>
+ <summary> <ins>Globale install for opencv:</ins></summary>
 
 
 ```shell
