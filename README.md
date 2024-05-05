@@ -10,7 +10,7 @@
 
 ```shell
 sudo apt install python3-opencv
-``
+```
 </details>
 
 #### **<ins>venv opencv install opencv:</ins>**
