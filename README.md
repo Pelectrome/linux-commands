@@ -107,6 +107,11 @@
 </code></pre> 
 ✴ Now you can run the script
 </details>
+ <summary><ins>Install picamera2:</ins></summary>
+✴ Run this command:
+<pre><code class="language-shell">sudo apt install -y python3-picamera2
+</code></pre> 
+</details>
 
 ---
 ## Linux:<img height="40px" align="right" src="https://www.debian.org/logos/openlogo-nd.svg" alt=""/>    
