@@ -107,6 +107,7 @@
 </code></pre> 
 ✴ Now you can run the script
 </details>
+<details>
  <summary><ins>Install picamera2:</ins></summary>
 ✴ Run this command:
 <pre><code class="language-shell">sudo apt install -y python3-picamera2
