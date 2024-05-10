@@ -54,6 +54,9 @@
 ✴ Add this to the end:(example)
 <pre><code class="language-shell">su -c "python3 /path/to/your/script.py > /path/to/your/logfile.log 2>&1" pi &
 </code></pre> 
+✴ if you want to run chrome in kiosk mode:(example)
+<pre><code class="language-shell">su -c "/usr/bin/chromium-browser --kiosk --disable-session-crashed-bubble --disable-infobars http://localhost:5555" pi
+</code></pre> 
 ✴ Update permission:
 <pre><code class="language-shell">sudo chmod +x /etc/rc.local
 </code></pre> 
