@@ -131,6 +131,21 @@
 <pre><code class="language-shell">ping <hostname>.local
 </code></pre> 
 </details>
+<details>
+ <summary><ins>Set a static IP address for Raspberry Pi:</ins></summary>
+✴ Run this command:
+<pre><code class="language-shell">sudo nano /etc/dhcpcd.conf
+</code></pre> 
+✴ In end of the file add the following lines:
+<pre><code class="language-shell">interface wlan0
+static ip_address=192.168.1.100/24
+static routers=192.168.1.1
+static domain_name_servers=192.168.1.1
+</code></pre>
+✴ Run this command:
+<pre><code class="language-shell">sudo service dhcpcd restart
+</code></pre>
+</details>
 
 ---
 ## Linux:<img height="40px" align="right" src="https://www.debian.org/logos/openlogo-nd.svg" alt=""/>    
