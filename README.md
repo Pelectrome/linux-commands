@@ -116,6 +116,21 @@
 <pre><code class="language-shell">sudo apt install -y python3-picamera2
 </code></pre> 
 </details>
+<details>
+ <summary><ins>Make raspberry discoverable by local network:</ins></summary>
+✴ Run this command:
+<pre><code class="language-shell">sudo nano /etc/avahi/avahi-daemon.conf
+</code></pre> 
+✴ In [server] section uncomment and modify this line to your desired hostname:
+<pre><code class="language-shell">#host-name=foo
+</code></pre>
+✴ Run this command:
+<pre><code class="language-shell">sudo service avahi-daemon restart
+</code></pre>
+✴ To discover it:
+<pre><code class="language-shell">ping <hostname>.local
+</code></pre> 
+</details>
 
 ---
 ## Linux:<img height="40px" align="right" src="https://www.debian.org/logos/openlogo-nd.svg" alt=""/>    
