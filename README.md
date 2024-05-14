@@ -146,6 +146,15 @@ static domain_name_servers=192.168.1.1
 <pre><code class="language-shell">sudo service dhcpcd restart
 </code></pre>
 </details>
+<details>
+ <summary><ins>Permanently hide mouse pointer on Raspberry pi:</ins></summary>
+✴ Run this command:
+<pre><code class="language-shell">sudo nano /etc/lightdm/lightdm.conf
+</code></pre> 
+✴ Add this to the file after [Seat:*]:
+<pre><code class="language-shell">xserver-command = X -nocursor
+</code></pre> 
+</details>
 
 ---
 ## Linux:<img height="40px" align="right" src="https://www.debian.org/logos/openlogo-nd.svg" alt=""/>    
