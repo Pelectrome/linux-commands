@@ -136,7 +136,7 @@
 <pre><code class="language-shell">sudo service avahi-daemon restart
 </code></pre>
 ✴ To discover it:
-<pre><code class="language-shell">ping <hostname>.local
+<pre><code class="language-shell">ping hostname.local
 </code></pre> 
 </details>
 <details>
