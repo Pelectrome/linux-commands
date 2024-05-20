@@ -19,6 +19,14 @@
 </code></pre> 
 </details>
  <details>
+ <summary><ins>Install pyaudio:</ins></summary>
+<pre><code class="language-shell">pip install pyaudio
+</code></pre> 
+✴ need to install portaudio19-dev:
+<pre><code class="language-shell">sudo apt install portaudio19-dev
+</code></pre> 
+</details>
+ <details>
  <summary><ins>Open audio sound:</ins></summary>
 <pre><code class="language-shell">alsamixer
 </code></pre> 
