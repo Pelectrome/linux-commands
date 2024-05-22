@@ -163,6 +163,16 @@ static domain_name_servers=192.168.1.1
 <pre><code class="language-shell">xserver-command = X -nocursor
 </code></pre> 
 </details>
+<details>
+ <summary><ins>Bind flask to port 80:</ins></summary>
+✴ Install authbind:
+<pre><code class="language-shell">sudo apt install authbind
+</code></pre> 
+✴ Configure access to port 80:
+<pre><code class="language-shell">sudo touch /etc/authbind/byport/80
+sudo chmod 777 /etc/authbind/byport/80
+</code></pre> 
+</details>
 
 ---
 ## Linux:<img height="40px" align="right" src="https://www.debian.org/logos/openlogo-nd.svg" alt=""/>    
