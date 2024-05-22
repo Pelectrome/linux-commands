@@ -177,6 +177,9 @@ sudo chmod 777 /etc/authbind/byport/80
 sudo chgrp {groupname} /etc/authbind/byport/80
 sudo usermod -a -G {groupname} {username}
 </code></pre> 
+✴ To run:
+<pre><code class="language-shell">authbind --deep python3 main.py
+</code></pre> 
 </details>
 <details>
  <summary><ins>Create hotspot network on Raspberry pi:</ins></summary>
