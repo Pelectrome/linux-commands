@@ -178,6 +178,24 @@ sudo chgrp {groupname} /etc/authbind/byport/80
 sudo usermod -a -G {groupname} {username}
 </code></pre> 
 </details>
+<details>
+ <summary><ins>Create hotspot network on Raspberry pi:</ins></summary>
+✴ Create hotspot for wifi_device:
+<pre><code class="language-shell">sudo nmcli device wifi hotspot ssid {hotspot_name} password {hotspot_password} ifname {wifi_device}
+</code></pre> 
+✴ Example:
+<pre><code class="language-shell">sudo nmcli device wifi hotspot ssid Home_5GHz password 12345678 ifname wlan0
+</code></pre> 
+✴ To get hotspot_UUID:
+<pre><code class="language-shell">nmcli connection
+</code></pre>
+✴ Set autoconnect to hotspot:
+<pre><code class="language-shell">sudo nmcli connection modify {hotspot_UUID} connection.autoconnect yes connection.autoconnect-priority 100
+</code></pre> 
+✴ To verify:
+<pre><code class="language-shell">nmcli connection show {hotspot_UUID}
+</code></pre> 
+</details>
 
 ---
 ## Linux:<img height="40px" align="right" src="https://www.debian.org/logos/openlogo-nd.svg" alt=""/>    
