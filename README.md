@@ -172,6 +172,11 @@ static domain_name_servers=192.168.1.1
 <pre><code class="language-shell">sudo touch /etc/authbind/byport/80
 sudo chmod 777 /etc/authbind/byport/80
 </code></pre> 
+✴ For security:
+<pre><code class="language-shell">sudo chmod 550 /etc/authbind/byport/80
+sudo chgrp {groupname} /etc/authbind/byport/80
+sudo usermod -a -G {groupname} {username}
+</code></pre> 
 </details>
 
 ---
