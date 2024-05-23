@@ -199,7 +199,7 @@ sudo usermod -a -G {groupname} {username}
 <pre><code class="language-shell">nmcli connection show {hotspot_UUID}
 </code></pre> 
 🚨 Important to let DNS working and internet sharing:
-<pre><code class="language-shell">nmcli connection modify {hotspot_UUID} ipv4.addresses 192.168.4.1/24 ipv4.method shared
+<pre><code class="language-shell">sudo nmcli connection modify {hotspot_UUID} ipv4.addresses 192.168.4.1/24 ipv4.method shared
 </code></pre> 
 </details>
 
