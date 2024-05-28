@@ -25,6 +25,9 @@
 ✴ need to install portaudio19-dev:
 <pre><code class="language-shell">sudo apt install portaudio19-dev
 </code></pre> 
+✴ If you are in lite os install:
+<pre><code class="language-shell">sudo apt install pulseaudio
+</code></pre> 
 </details>
  <details>
  <summary><ins>Open audio sound:</ins></summary>
