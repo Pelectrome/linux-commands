@@ -121,6 +121,13 @@
 </code></pre> 
 ✴ Now you can run the script
 </details>
+ <details>
+ <summary><ins>Run GUI script:</ins></summary>
+✴ Add to python script:
+<pre><code class="language-shell">os.environ["DISPLAY"] = ":0"
+</code></pre> 
+✴ Now you can run the script
+</details>
 <details>
  <summary><ins>Install picamera2:</ins></summary>
 ✴ Run this command:
