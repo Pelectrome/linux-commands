@@ -223,6 +223,9 @@ sudo usermod -a -G {groupname} {username}
 
 <details>
  <summary><ins>Kiosk mode:</ins></summary>
+✴ 🚨 Note: Install this if you are runing in raspberry pi 5
+<pre><code class="language-shell">sudo apt install gldriver-test
+</code></pre> 	
 ✴ Update:
 <pre><code class="language-shell">sudo apt update
 </code></pre> 
