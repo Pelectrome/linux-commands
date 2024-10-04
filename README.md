@@ -244,6 +244,23 @@ sed -i 's/"exited_cleanly":false/"exited_cleanly":true/' ~/.config/chromium/'Loc
 sed -i 's/"exited_cleanly":false/"exited_cleanly":true/; s/"exit_type":"[^"]\+"/"exit_type":"Normal"/' ~/.config/chromium/Default/Preferences
 /usr/bin/chromium --disable-infobars --kiosk 'http://your-url-here' &
 </code></pre> 
+✴ Autologin:
+<pre><code class="language-shell">sudo mkdir -p /etc/systemd/system/getty@tty1.service.d
+</code></pre>
+<pre><code class="language-shell">sudo nano /etc/systemd/system/getty@tty1.service.d/override.conf
+</code></pre>
+✴ Add the following:
+<pre><code class="language-shell">
+[Service]
+ExecStart=
+ExecStart=-/sbin/agetty --autologin dz --noclear %I $TERM
+</code></pre>
+🚨 Note: dz = username
+✴ Update service:
+<pre><code class="language-shell">sudo systemctl daemon-reload
+</code></pre>
+<pre><code class="language-shell">sudo systemctl restart getty@tty1
+</code></pre>
 </details>
 
 ---
