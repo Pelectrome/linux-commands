@@ -221,6 +221,31 @@ sudo usermod -a -G {groupname} {username}
 </code></pre> 
 </details>
 
+<details>
+ <summary><ins>Kiosk mode:</ins></summary>
+* Update:
+<pre><code class="language-shell">sudo apt update
+</code></pre> 
+<pre><code class="language-shell">sudo apt upgrade
+</code></pre> 
+* Install graphics libraries:
+<pre><code class="language-shell">sudo apt-get install --no-install-recommends xserver-xorg x11-xserver-utils xinit openbox
+</code></pre> 
+* Chromium installation:
+<pre><code class="language-shell">sudo apt-get install --no-install-recommends chromium-browser
+</code></pre> 
+* Openbox configuration:
+<pre><code class="language-shell">sudo nano /etc/xdg/openbox/autostart
+</code></pre>
+* Replace the contents of the file with the following:
+<pre><code class="language-shell">
+# Start Chromium in kiosk mode
+sed -i 's/"exited_cleanly":false/"exited_cleanly":true/' ~/.config/chromium/'Local State'
+sed -i 's/"exited_cleanly":false/"exited_cleanly":true/; s/"exit_type":"[^"]\+"/"exit_type":"Normal"/' ~/.config/chromium/Default/Preferences
+/usr/bin/chromium --disable-infobars --kiosk 'http://your-url-here' &
+</code></pre> 
+</details>
+
 ---
 ## Linux:<img height="40px" align="right" src="https://www.debian.org/logos/openlogo-nd.svg" alt=""/>    
 
