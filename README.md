@@ -223,21 +223,21 @@ sudo usermod -a -G {groupname} {username}
 
 <details>
  <summary><ins>Kiosk mode:</ins></summary>
-* Update:
+✴ Update:
 <pre><code class="language-shell">sudo apt update
 </code></pre> 
 <pre><code class="language-shell">sudo apt upgrade
 </code></pre> 
-* Install graphics libraries:
+✴ Install graphics libraries:
 <pre><code class="language-shell">sudo apt-get install --no-install-recommends xserver-xorg x11-xserver-utils xinit openbox
 </code></pre> 
-* Chromium installation:
+✴ Chromium installation:
 <pre><code class="language-shell">sudo apt-get install --no-install-recommends chromium-browser
 </code></pre> 
-* Openbox configuration:
+✴ Openbox configuration:
 <pre><code class="language-shell">sudo nano /etc/xdg/openbox/autostart
 </code></pre>
-* Replace the contents of the file with the following:
+✴ Replace the contents of the file with the following:
 <pre><code class="language-shell">
 # Start Chromium in kiosk mode
 sed -i 's/"exited_cleanly":false/"exited_cleanly":true/' ~/.config/chromium/'Local State'
