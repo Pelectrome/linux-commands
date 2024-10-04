@@ -263,6 +263,12 @@ ExecStart=-/sbin/agetty --autologin dz --noclear %I $TERM
 </code></pre>
 </details>
 
+<details>
+ <summary><ins>Set DISPLAY variable:</ins></summary>
+<pre><code class="language-shell">export DISPLAY=:0
+</code></pre> 
+</details>
+
 ---
 ## Linux:<img height="40px" align="right" src="https://www.debian.org/logos/openlogo-nd.svg" alt=""/>    
 
