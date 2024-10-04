@@ -213,6 +213,14 @@ sudo usermod -a -G {groupname} {username}
 </code></pre> 
 </details>
 
+<details>
+ <summary><ins>Set Git username and email:</ins></summary>
+<pre><code class="language-shell">git config --global user.name "Your Name"
+</code></pre> 
+<pre><code class="language-shell">git config --global user.email "your.email@example.com"
+</code></pre> 
+</details>
+
 ---
 ## Linux:<img height="40px" align="right" src="https://www.debian.org/logos/openlogo-nd.svg" alt=""/>    
 
