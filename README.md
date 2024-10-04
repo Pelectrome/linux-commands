@@ -255,7 +255,7 @@ sed -i 's/"exited_cleanly":false/"exited_cleanly":true/; s/"exit_type":"[^"]\+"/
 ExecStart=
 ExecStart=-/sbin/agetty --autologin dz --noclear %I $TERM
 </code></pre>
-🚨 Note: dz = username
+🚨 Note: dz = username<br>
 ✴ Update service:
 <pre><code class="language-shell">sudo systemctl daemon-reload
 </code></pre>
