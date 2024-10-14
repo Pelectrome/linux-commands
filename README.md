@@ -46,12 +46,12 @@
  </details>
  <details>
  <summary><ins>Copy folder from pc to pi:</ins>(example)</summary>
-<pre><code class="language-shell">scp -r /home/user/Documents/example.txt pi@192.168.1.100:/home/pi/
+<pre><code class="language-shell">scp -r /home/user/Documents/my_folder pi@192.168.1.100:/home/pi/
 </code></pre> 
  </details>
  <details>
  <summary><ins>Copy file from pc to pi:</ins>(example)</summary>
-<pre><code class="language-shell">scp -r /home/user/Documents/my_folder pi@192.168.1.100:/home/pi/
+<pre><code class="language-shell">scp /home/user/Documents/example.txt pi@192.168.1.100:/home/pi/
 </code></pre> 
  </details>
 <details>
