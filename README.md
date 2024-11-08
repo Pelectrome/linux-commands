@@ -285,6 +285,19 @@ ExecStart=-/sbin/agetty --autologin dz --noclear %I $TERM
 </code></pre> 
 </details>
 
+<details>
+ <summary><ins>Connect to Wi-Fi using nmcli variable:</ins></summary>
+✴ List Available Wi-Fi Networks:
+<pre><code class="language-shell">nmcli device wifi list
+</code></pre> 
+✴ Connect to a Wi-Fi Network:
+<pre><code class="language-shell">nmcli device wifi connect "<SSID>" password "<password>"
+</code></pre> 
+✴ Verify Connection:
+<pre><code class="language-shell">nmcli connection show --active
+</code></pre> 
+</details>
+
 ---
 ## Linux:<img height="40px" align="right" src="https://www.debian.org/logos/openlogo-nd.svg" alt=""/>    
 
