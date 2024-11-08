@@ -302,7 +302,6 @@ ExecStart=-/sbin/agetty --autologin dz --noclear %I $TERM
 ✴ Set the connection to auto-connect:
 <pre><code class="language-shell">sudo nmcli connection modify "connection_name" connection.autoconnect yes
 </code></pre> 
-</details>
 ✴ Verify the auto-connect setting:
 <pre><code class="language-shell">nmcli connection show "connection_name"
 </code></pre> 
