@@ -278,7 +278,7 @@ ExecStart=-/sbin/agetty --autologin dz --noclear %I $TERM
 <pre><code class="language-shell">sudo systemctl restart getty@tty1
 </code></pre>
 🚨 Automatically Run startx on Login:
-<pre><code class="language-shell">echo "if [ -z "\$DISPLAY" ] && [ \$(tty) = /dev/tty1 ]; then startx; fi" >> ~/.profile
+<pre><code class="language-shell">echo "if [ -z "\$DISPLAY" ] && [ \$(tty) = /dev/tty1 ]; then startx -- -nocursor; fi" >> ~/.profile
 </code></pre>
 
 </details>
