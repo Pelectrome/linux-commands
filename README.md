@@ -260,6 +260,22 @@ sed -i 's/"exited_cleanly":false/"exited_cleanly":true/' ~/.config/chromium/'Loc
 sed -i 's/"exited_cleanly":false/"exited_cleanly":true/; s/"exit_type":"[^"]\+"/"exit_type":"Normal"/' ~/.config/chromium/Default/Preferences
 /usr/bin/chromium --disable-infobars --kiosk 'http://your-url-here' &
 </code></pre> 
+✴ If you are in debian Replace the contents of the file with the following:
+<pre><code class="language-shell">
+# Start Chromium in kiosk mode
+# Rotate screem
+xrandr --output HDMI-1 --rotate right &
+# Disable any form of screen saver / screen blanking / power management
+xset s off
+xset s noblank
+xset -dpms
+# Allow quitting the X server with CTRL-ALT-Backspace
+setxkbmap -option terminate:ctrl_alt_bksp
+# Start Chromium in kiosk mode
+sed -i 's/"exited_cleanly":false/"exited_cleanly":true/' ~/.config/chromium/'Local State'
+sed -i 's/"exited_cleanly":false/"exited_cleanly":true/; s/"exit_type":"[^"]\+"/"exit_type":"Normal"/' ~/.config/chromium/Default/Pr>
+(sleep 5 && /usr/bin/chromium --disable-infobars --kiosk 'https://google.com') &
+</code></pre> 
 ✴ Autologin:
 <pre><code class="language-shell">sudo mkdir -p /etc/systemd/system/getty@tty1.service.d
 </code></pre>
