@@ -296,7 +296,6 @@ ExecStart=-/sbin/agetty --autologin dz --noclear %I $TERM
 ✴ Verify Connection:
 <pre><code class="language-shell">nmcli connection show --active
 </code></pre> 
-</details>
 ✴ Check the connection name:
 <pre><code class="language-shell">nmcli connection show
 </code></pre> 
