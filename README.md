@@ -247,6 +247,9 @@ sudo usermod -a -G {groupname} {username}
 ✴ Chromium installation:
 <pre><code class="language-shell">sudo apt-get install --no-install-recommends chromium-browser
 </code></pre> 
+✴ Chromium installation in debian:
+<pre><code class="language-shell">sudo apt-get install --no-install-recommends chromium
+</code></pre> 
 ✴ Openbox configuration:
 <pre><code class="language-shell">sudo nano /etc/xdg/openbox/autostart
 </code></pre>
