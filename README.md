@@ -365,7 +365,18 @@ ExecStart=-/sbin/agetty --autologin dz --noclear %I $TERM
 
 <details>
  <summary><ins>Add permissions to access USB devices:</ins></summary>
-<pre><code class="language-shell">sudo usermod -aG plugdev $(whoami)
+✴ Create a new udev rule file:
+<pre><code class="language-shell">sudo nano /etc/udev/rules.d/99-usb.rules
+</code></pre> 
+✴ Add the following line to give all users permission to access USB devices:
+<pre><code class="language-shell">SUBSYSTEM=="usb", MODE="0666"
+</code></pre> 
+✴ Save the file and reload the udev rules:
+<pre><code class="language-shell">sudo udevadm control --reload-rules
+</code></pre> 
+✴ Alternatively, if you need specific access to a particular USB device, you can add a rule based on the device's vendor and product ID. For example:
+✴ Replace 1234 and 5678 with the actual vendor and product IDs of your USB device. You can find this information by running lsusb.
+<pre><code class="language-shell">SUBSYSTEM=="usb", ATTR{idVendor}=="1234", ATTR{idProduct}=="5678", MODE="0666"
 </code></pre> 
 🚨 Note: log out and log back in
 </details>
