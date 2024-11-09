@@ -374,8 +374,7 @@ ExecStart=-/sbin/agetty --autologin dz --noclear %I $TERM
 ✴ Save the file and reload the udev rules:
 <pre><code class="language-shell">sudo udevadm control --reload-rules
 </code></pre> 
-✴ Alternatively, if you need specific access to a particular USB device, you can add a rule based on the device's vendor and product ID. For example:
-✴ Replace 1234 and 5678 with the actual vendor and product IDs of your USB device. You can find this information by running lsusb.
+✴ Alternatively, if you need specific access to a particular USB device, you can add a rule based on the device's vendor and product ID. For example Replace 1234 and 5678 with the actual vendor and product IDs:
 <pre><code class="language-shell">SUBSYSTEM=="usb", ATTR{idVendor}=="1234", ATTR{idProduct}=="5678", MODE="0666"
 </code></pre> 
 🚨 Note: log out and log back in
