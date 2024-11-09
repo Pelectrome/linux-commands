@@ -363,6 +363,14 @@ ExecStart=-/sbin/agetty --autologin dz --noclear %I $TERM
 </code></pre> 
 </details>
 
+<details>
+ <summary><ins>Add permissions to access USB devices:</ins></summary>
+<pre><code class="language-shell">sudo usermod -aG plugdev $(whoami)
+</code></pre> 
+🚨 Note: log out and log back in
+</details>
+
+
 ---
 ## Linux:<img height="40px" align="right" src="https://www.debian.org/logos/openlogo-nd.svg" alt=""/>    
 
