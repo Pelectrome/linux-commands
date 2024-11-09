@@ -347,6 +347,22 @@ ExecStart=-/sbin/agetty --autologin dz --noclear %I $TERM
 </code></pre> 
 </details>
 
+<details>
+ <summary><ins>Add font to debiam:</ins></summary>
+✴ Create the fonts directory:
+<pre><code class="language-shell">sudo mkdir -p /usr/share/fonts/truetype/custom
+</code></pre> 
+✴ Copy your font files to this directory:
+<pre><code class="language-shell">sudo cp /path/to/font.ttf /usr/share/fonts/truetype/custom/
+</code></pre> 
+✴ Update the font cache
+<pre><code class="language-shell">sudo fc-cache -f -v
+</code></pre> 
+✴ Verify the Installation:
+<pre><code class="language-shell">fc-list | grep "FontName"
+</code></pre> 
+</details>
+
 ---
 ## Linux:<img height="40px" align="right" src="https://www.debian.org/logos/openlogo-nd.svg" alt=""/>    
 
