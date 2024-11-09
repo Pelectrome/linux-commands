@@ -348,7 +348,7 @@ ExecStart=-/sbin/agetty --autologin dz --noclear %I $TERM
 </details>
 
 <details>
- <summary><ins>Add font to debiam:</ins></summary>
+ <summary><ins>Add font to debian:</ins></summary>
 ✴ Create the fonts directory:
 <pre><code class="language-shell">sudo mkdir -p /usr/share/fonts/truetype/custom
 </code></pre> 
