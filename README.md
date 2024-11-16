@@ -277,8 +277,8 @@ sed -i 's/"exited_cleanly":false/"exited_cleanly":true/; s/"exit_type":"[^"]\+"/
 ✴ If you are in debian and you want to rotate screen & touch:
 <pre><code class="language-shell">
 # Start Chromium in kiosk mode
-# Rotate screem
-xrandr --output HDMI-1 --rotate right &
+# Rotate screem and detect screen automaticaly 
+xrandr --output $(xrandr | grep -w "connected" | grep "HDMI" | awk '{print $1}') --rotate right &
 # Apply touchscreen transformation for right rotation
 (sleep 3 && xinput set-prop 8 "Coordinate Transformation Matrix" 0 1 0 -1 0 1 0 0 1) &
 (sleep 3 && xinput set-prop 9 "Coordinate Transformation Matrix" 0 1 0 -1 0 1 0 0 1) &
