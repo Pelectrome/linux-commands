@@ -81,6 +81,9 @@
 ✴ Update permission:
 <pre><code class="language-shell">sudo chmod +x /etc/rc.local
 </code></pre> 
+✴ run as pi user
+<pre><code class="language-shell">su - pi -c "authbind --deep /usr/bin/python3 /home/pi/Documents/knowpet/main.py >> /home/pi/Documents/knowpet/logfile.log 2>&1 &"
+</code></pre> 
 </details>
  <details>
  <summary><ins>Run app with UI in startup use this:</ins></summary>
