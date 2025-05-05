@@ -519,7 +519,7 @@ Certbot will:
 
 Auto-Renewal (Important):
 
-<pre><code class="language-shell">sudo apt install certbot python3-certbot-nginx
+<pre><code class="language-shell">
 sudo certbot renew --dry-run
 </code></pre>
   
