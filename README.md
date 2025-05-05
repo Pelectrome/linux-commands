@@ -509,13 +509,20 @@ Make sure:
 Then run:
 
 <pre><code class="language-shell">sudo apt install certbot python3-certbot-nginx
-sudo certbot --nginx -d shopi.duckdns.org
+sudo certbot --nginx
 </code></pre>
 
 Certbot will:
 - Verify your domain
 - Get an HTTPS certificate
 - Automatically update your Nginx config
+
+Auto-Renewal (Important):
+
+<pre><code class="language-shell">sudo apt install certbot python3-certbot-nginx
+sudo certbot renew --dry-run
+</code></pre>
+  
 </details>
 
 <details>
