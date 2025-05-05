@@ -477,6 +477,11 @@ server {
     listen 80;
     server_name shopi.duckdns.org;
 
+    location ~* \.(jpg|jpeg|png|gif|ico|css|js|woff|woff2|ttf|svg|eot|otf)$ {
+        expires 30d;
+        add_header Cache-Control "public";
+    }
+
     location / {
         proxy_pass http://127.0.0.1:8000;
         proxy_set_header Host $host;
