@@ -382,7 +382,75 @@ ExecStart=-/sbin/agetty --autologin dz --noclear %I $TERM
 </code></pre> 
 🚨 Note: log out and log back in
 </details>
+<details>
+ <summary><ins>1. Run Flask App Behind Gunicorn</ins></summary>
+<pre><code class="language-shell"># In your project folder:
+pip install gunicorn
 
+# Run Gunicorn (use your actual filename if not app.py):
+gunicorn -w 4 -b 127.0.0.1:8000 app:app
+
+# 'app:app' means 'filename:Flask instance'
+# Example: if your file is 'main.py' and your Flask instance is 'app', use 'main:app'
+</code></pre>
+
+You can also create a `systemd` service later to run it on boot.
+</details>
+
+<details>
+ <summary><ins>2. Configure Nginx for HTTPS (DuckDNS)</ins></summary>
+<pre><code class="language-shell"># Create or edit your Nginx config:
+sudo nano /etc/nginx/sites-available/shopi
+</code></pre>
+
+Paste this:
+
+```nginx
+server {
+    listen 80;
+    server_name shopi.duckdns.org;
+
+    location / {
+        proxy_pass http://127.0.0.1:8000;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
+```
+
+Enable the config and reload Nginx:
+
+<pre><code class="language-shell">sudo ln -s /etc/nginx/sites-available/shopi /etc/nginx/sites-enabled/
+sudo nginx -t
+sudo systemctl reload nginx
+</code></pre>
+</details>
+
+<details>
+ <summary><ins>3. Get a Free HTTPS Certificate with Certbot</ins></summary>
+Make sure:
+- Your domain (e.g., `shopi.duckdns.org`) points to your public IP
+- Ports **80** and **443** are forwarded to your Raspberry Pi
+
+Then run:
+
+<pre><code class="language-shell">sudo apt install certbot python3-certbot-nginx
+sudo certbot --nginx -d shopi.duckdns.org
+</code></pre>
+
+Certbot will:
+- Verify your domain
+- Get an HTTPS certificate
+- Automatically update your Nginx config
+</details>
+
+<details>
+ <summary><ins>4. Done! Your Flask App is Live at:</ins></summary>
+<pre><code class="language-text">https://shopi.duckdns.org
+</code></pre>
+</details>
 
 ---
 ## Linux:<img height="40px" align="right" src="https://www.debian.org/logos/openlogo-nd.svg" alt=""/>    
