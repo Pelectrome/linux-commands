@@ -382,8 +382,9 @@ ExecStart=-/sbin/agetty --autologin dz --noclear %I $TERM
 </code></pre> 
 🚨 Note: log out and log back in
 </details>
+
 <details>
-<details>
+<Run flask in HTTPS with certificat>
  <summary><ins>1. Run Flask App Behind Gunicorn</ins></summary>
 <pre><code class="language-shell"># In your project folder:
 pip install gunicorn
