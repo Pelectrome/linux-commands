@@ -389,7 +389,7 @@ ExecStart=-/sbin/agetty --autologin dz --noclear %I $TERM
  <summary><ins>Run Flask in HTTPS with Certificate</ins></summary>
 <br>	
 <details>
- <summary><ins>1. DuckDNS Setup on Linux</ins></summary>
+ &nbsp;<summary><ins>1. DuckDNS Setup on Linux</ins></summary>
 
 🧱 **1. Create a DuckDNS Account**
 - Go to: [https://www.duckdns.org](https://www.duckdns.org)
