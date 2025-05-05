@@ -394,11 +394,11 @@ ExecStart=-/sbin/agetty --autologin dz --noclear %I $TERM
 <pre><code class="language-shell"># In your project folder:
 pip install gunicorn
 
-# Run Gunicorn (use your actual filename if not app.py):
+Run Gunicorn (use your actual filename if not app.py):
 gunicorn -w 4 -b 127.0.0.1:8000 app:app
 
-# 'app:app' means 'filename:Flask instance'
-# Example: if your file is 'main.py' and your Flask instance is 'app', use 'main:app'
+'app:app' means 'filename:Flask instance'
+Example: if your file is 'main.py' and your Flask instance is 'app', use 'main:app'
 </code></pre>
 
 You can also create a `systemd` service later to run it on boot.
