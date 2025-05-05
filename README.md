@@ -386,10 +386,10 @@ ExecStart=-/sbin/agetty --autologin dz --noclear %I $TERM
 
 
 <details>
- <summary><ins>Run Flask in HTTPS with Certificate</ins></summary>
-
 ### ✅ Step-by-Step: DuckDNS Setup on Linux
-
+<details>
+ <summary><ins>Run Flask in HTTPS with Certificate</ins></summary>
+	
 🧱 **1. Create a DuckDNS Account**
 - Go to: [https://www.duckdns.org](https://www.duckdns.org)
 - Sign in using Google, GitHub, or Twitter.
@@ -446,7 +446,7 @@ Then check the log:
 
 You should see something like OK.
 
----
+</details>
 
 ### 🚀 Deploy Flask App with Duck DNS, Gunicorn, Nginx & HTTPS (Let's Encrypt)
 
