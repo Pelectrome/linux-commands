@@ -384,8 +384,69 @@ ExecStart=-/sbin/agetty --autologin dz --noclear %I $TERM
 </details>
 
 
+
 <details>
  <summary><ins>Run Flask in HTTPS with Certificate</ins></summary>
+
+### ✅ Step-by-Step: DuckDNS Setup on Linux
+
+🧱 **1. Create a DuckDNS Account**
+- Go to: [https://www.duckdns.org](https://www.duckdns.org)
+- Sign in using Google, GitHub, or Twitter.
+- Once logged in, go to the domains tab.
+- Create a subdomain (e.g., `myserver.duckdns.org`).
+- Copy your token (you’ll need it for the script).
+
+📜 **2. Create an Update Script**
+Open a terminal and do the following:
+
+<pre><code class="language-shell">mkdir -p ~/duckdns
+cd ~/duckdns
+nano duck.sh
+</code></pre>
+
+Paste this in the duck.sh file (replace `YOURDOMAIN` and `YOURTOKEN`):
+
+<pre><code class="language-shell">echo url="https://www.duckdns.org/update?domains=YOURDOMAIN&token=YOURTOKEN&ip=" | curl -k -o ~/duckdns/duck.log -K -
+</code></pre>
+
+Example:
+
+<pre><code class="language-shell">echo url="https://www.duckdns.org/update?domains=myserver&token=abc123xyz456&ip=" | curl -k -o ~/duckdns/duck.log -K -
+</code></pre>
+
+Make it executable:
+
+<pre><code class="language-shell">chmod +x duck.sh
+</code></pre>
+
+⏱️ **3. Auto-Update with Cron**
+Open crontab:
+
+<pre><code class="language-shell">crontab -e
+</code></pre>
+
+Add this line to run every 5 minutes:
+
+<pre><code class="language-shell">*/5 * * * * ~/duckdns/duck.sh >/dev/null 2>&1
+</code></pre>
+
+Save and exit (Ctrl+X, then Y, then Enter).
+
+✅ **4. Verify**
+You can test it manually:
+
+<pre><code class="language-shell">./duck.sh
+</code></pre>
+
+Then check the log:
+
+<pre><code class="language-shell">cat duck.log
+</code></pre>
+
+You should see something like OK.
+
+---
 
 ### 🚀 Deploy Flask App with Duck DNS, Gunicorn, Nginx & HTTPS (Let's Encrypt)
 
@@ -397,8 +458,8 @@ pip install gunicorn
 Run Gunicorn (use your actual filename if not app.py):
 gunicorn -w 4 -b 127.0.0.1:8000 app:app
 
-'app:app' means 'filename:Flask instance'
-Example: if your file is 'main.py' and your Flask instance is 'app', use 'main:app'
+ 'app:app' means 'filename:Flask instance'
+ Example: if your file is 'main.py' and your Flask instance is 'app', use 'main:app'
 </code></pre>
 
 You can also create a `systemd` service later to run it on boot.
@@ -460,6 +521,7 @@ Certbot will:
 </details>
 
 </details>
+
 
 
 ---
