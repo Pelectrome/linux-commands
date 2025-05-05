@@ -383,8 +383,12 @@ ExecStart=-/sbin/agetty --autologin dz --noclear %I $TERM
 🚨 Note: log out and log back in
 </details>
 
+
 <details>
-<Run flask in HTTPS with certificat>
+ <summary><ins>Run Flask in HTTPS with Certificate</ins></summary>
+
+### 🚀 Deploy Flask App with Duck DNS, Gunicorn, Nginx & HTTPS (Let's Encrypt)
+
 <details>
  <summary><ins>1. Run Flask App Behind Gunicorn</ins></summary>
 <pre><code class="language-shell"># In your project folder:
@@ -454,7 +458,9 @@ Certbot will:
 <pre><code class="language-text">https://shopi.duckdns.org
 </code></pre>
 </details>
+
 </details>
+
 
 ---
 ## Linux:<img height="40px" align="right" src="https://www.debian.org/logos/openlogo-nd.svg" alt=""/>    
