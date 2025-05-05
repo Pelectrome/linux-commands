@@ -387,9 +387,7 @@ ExecStart=-/sbin/agetty --autologin dz --noclear %I $TERM
 
 <details>
  <summary><ins>Run Flask in HTTPS with Certificate</ins></summary>
-
-
-	
+<br>	
 <details>
  <summary><ins>1. DuckDNS Setup on Linux</ins></summary>
 
