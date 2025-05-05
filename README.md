@@ -387,8 +387,10 @@ ExecStart=-/sbin/agetty --autologin dz --noclear %I $TERM
 
 <details>
  <summary><ins>Run Flask in HTTPS with Certificate</ins></summary>
-### ✅ Step-by-Step: DuckDNS Setup on Linux
+
 <details>
+ <summary><ins>✅ Step-by-Step: DuckDNS Setup on Linux</ins></summary>
+
 🧱 **1. Create a DuckDNS Account**
 - Go to: [https://www.duckdns.org](https://www.duckdns.org)
 - Sign in using Google, GitHub, or Twitter.
@@ -447,18 +449,16 @@ You should see something like OK.
 
 </details>
 
-### 🚀 Deploy Flask App with Duck DNS, Gunicorn, Nginx & HTTPS (Let's Encrypt)
-
 <details>
  <summary><ins>1. Run Flask App Behind Gunicorn</ins></summary>
 <pre><code class="language-shell"># In your project folder:
 pip install gunicorn
 
-Run Gunicorn (use your actual filename if not app.py):
+# Run Gunicorn (use your actual filename if not app.py):
 gunicorn -w 4 -b 127.0.0.1:8000 app:app
 
- 'app:app' means 'filename:Flask instance'
- Example: if your file is 'main.py' and your Flask instance is 'app', use 'main:app'
+# 'app:app' means 'filename:Flask instance'
+# Example: if your file is 'main.py' and your Flask instance is 'app', use 'main:app'
 </code></pre>
 
 You can also create a `systemd` service later to run it on boot.
@@ -520,6 +520,7 @@ Certbot will:
 </details>
 
 </details>
+
 
 
 
