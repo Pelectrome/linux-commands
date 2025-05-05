@@ -389,7 +389,7 @@ ExecStart=-/sbin/agetty --autologin dz --noclear %I $TERM
  <summary><ins>Run Flask in HTTPS with Certificate</ins></summary>
 
 <details>
- <summary><ins>✅ Step-by-Step: DuckDNS Setup on Linux</ins></summary>
+ <summary><ins>1. DuckDNS Setup on Linux</ins></summary>
 
 🧱 **1. Create a DuckDNS Account**
 - Go to: [https://www.duckdns.org](https://www.duckdns.org)
@@ -450,7 +450,7 @@ You should see something like OK.
 </details>
 
 <details>
- <summary><ins>1. Run Flask App Behind Gunicorn</ins></summary>
+ <summary><ins>2. Run Flask App Behind Gunicorn</ins></summary>
 <pre><code class="language-shell"># In your project folder:
 pip install gunicorn
 
@@ -465,7 +465,7 @@ You can also create a `systemd` service later to run it on boot.
 </details>
 
 <details>
- <summary><ins>2. Configure Nginx for HTTPS (DuckDNS)</ins></summary>
+ <summary><ins>3. Configure Nginx for HTTPS (DuckDNS)</ins></summary>
 <pre><code class="language-shell"># Create or edit your Nginx config:
 sudo nano /etc/nginx/sites-available/shopi
 </code></pre>
@@ -496,7 +496,7 @@ sudo systemctl reload nginx
 </details>
 
 <details>
- <summary><ins>3. Get a Free HTTPS Certificate with Certbot</ins></summary>
+ <summary><ins>4. Get a Free HTTPS Certificate with Certbot</ins></summary>
 Make sure:
 - Your domain (e.g., `shopi.duckdns.org`) points to your public IP
 - Ports **80** and **443** are forwarded to your Raspberry Pi
@@ -514,7 +514,7 @@ Certbot will:
 </details>
 
 <details>
- <summary><ins>4. Done! Your Flask App is Live at:</ins></summary>
+ <summary><ins>5. Done! Your Flask App is Live at:</ins></summary>
 <pre><code class="language-text">https://shopi.duckdns.org
 </code></pre>
 </details>
