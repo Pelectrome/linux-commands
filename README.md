@@ -383,6 +383,7 @@ ExecStart=-/sbin/agetty --autologin dz --noclear %I $TERM
 🚨 Note: log out and log back in
 </details>
 <details>
+<details>
  <summary><ins>1. Run Flask App Behind Gunicorn</ins></summary>
 <pre><code class="language-shell"># In your project folder:
 pip install gunicorn
@@ -451,7 +452,7 @@ Certbot will:
 <pre><code class="language-text">https://shopi.duckdns.org
 </code></pre>
 </details>
-
+</details>
 ---
 ## Linux:<img height="40px" align="right" src="https://www.debian.org/logos/openlogo-nd.svg" alt=""/>    
 
