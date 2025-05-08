@@ -528,7 +528,25 @@ sudo certbot renew --dry-run
 
 </details>
 
+<details> <summary><ins>Install Mosquitto :</ins></summary>
+✴ Update your system:
 
+<pre><code class="language-shell">sudo apt update sudo apt upgrade</code></pre>
+✴ Install Mosquitto and Mosquitto clients:
+
+<pre><code class="language-shell">sudo apt install mosquitto mosquitto-clients</code></pre>
+✴ Enable Mosquitto to start on boot:
+
+<pre><code class="language-shell">sudo systemctl enable mosquitto</code></pre>
+✴ Start Mosquitto service:
+
+<pre><code class="language-shell">sudo systemctl start mosquitto</code></pre>
+✴ Check if Mosquitto is running:
+
+<pre><code class="language-shell">sudo systemctl status mosquitto</code></pre>
+🚨 Note: With systemctl enable mosquitto, Mosquitto will automatically start after reboot.
+
+</details>
 <details> <summary><ins>Fix Permissions for Mosquitto SSL/TLS Certificates:</ins></summary>
 ✴ Set ownership for the certificate files to mosquitto user:
 
