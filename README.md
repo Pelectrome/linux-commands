@@ -477,11 +477,6 @@ server {
     listen 80;
     server_name shopi.duckdns.org;
 
-    location ~* \.(jpg|jpeg|png|gif|ico|css|js|woff|woff2|ttf|svg|eot|otf)$ {
-        expires 30d;
-        add_header Cache-Control "public";
-    }
-
     location / {
         proxy_pass http://127.0.0.1:8000;
         proxy_set_header Host $host;
@@ -557,7 +552,9 @@ sudo certbot renew --dry-run
 
 ✴ Configure Mosquitto for SSL/TLS:
 
-Add the following configuration to your mosquitto.conf file in sudo nano /etc/mosquitto/mosquitto.conf to enable both secure MQTT and WebSocket connections over SSL/TLS:
+Add the following configuration to your mosquitto.conf file to enable both secure MQTT and WebSocket connections over SSL/TLS:
+<pre><code class="language-shell">sudo nano /etc/mosquitto/mosquitto.conf</code></pre>
+</details>
 
 ```conf 
 # MQTT over TCP (optional, default) 
