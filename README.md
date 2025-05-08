@@ -557,9 +557,28 @@ sudo certbot renew --dry-run
 
 ✴ Configure Mosquitto for SSL/TLS:
 
-Add the following configuration to your mosquitto.conf file to enable both secure MQTT and WebSocket connections over SSL/TLS:
+Add the following configuration to your mosquitto.conf file in sudo nano /etc/mosquitto/mosquitto.conf to enable both secure MQTT and WebSocket connections over SSL/TLS:
 
-<pre><code class="language-shell"> # MQTT over TCP (optional, default) listener 1883 protocol mqtt # Secure MQTT over TLS (MQTTS) listener 8883 protocol mqtt certfile /etc/letsencrypt/live/shopinet.sytes.net/fullchain.pem keyfile /etc/letsencrypt/live/shopinet.sytes.net/privkey.pem # WebSocket (optional) listener 9001 protocol websockets # Secure WebSocket (WSS) listener 8081 protocol websockets certfile /etc/letsencrypt/live/shopinet.sytes.net/fullchain.pem keyfile /etc/letsencrypt/live/shopinet.sytes.net/privkey.pem # Authentication allow_anonymous false password_file /etc/mosquitto/pwfile </code></pre>
+```conf 
+# MQTT over TCP (optional, default) 
+listener 1883 protocol mqtt 
+# Secure MQTT over TLS (MQTTS) listener 8883 
+protocol mqtt 
+certfile /etc/letsencrypt/live/shopinet.sytes.net/fullchain.pem 
+keyfile /etc/letsencrypt/live/shopinet.sytes.net/privkey.pem 
+# WebSocket (optional) 
+listener 9001
+protocol websockets 
+# Secure WebSocket (WSS) 
+listener 8081 
+protocol websockets 
+certfile /etc/letsencrypt/live/shopinet.sytes.net/fullchain.pem 
+keyfile /etc/letsencrypt/live/shopinet.sytes.net/privkey.pem 
+# Authentication 
+allow_anonymous false 
+password_file /etc/mosquitto/pwfile
+```
+
 🚨 Note: After updating the mosquitto.conf file, restart the Mosquitto service again:
 
 <pre><code class="language-shell">sudo systemctl restart mosquitto</code></pre> </details>
