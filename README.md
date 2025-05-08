@@ -534,42 +534,35 @@ sudo certbot renew --dry-run
 </details>
 
 
-Certainly! Here's the process with clear, concise steps in the requested format:
-
-<details>
-  <summary><ins>Fix Permissions for Mosquitto SSL/TLS Certificates:</ins></summary>
-
-✴ **Set ownership for the certificate files** to `mosquitto` user:
+<details> <summary><ins>Fix Permissions for Mosquitto SSL/TLS Certificates:</ins></summary>
+✴ Set ownership for the certificate files to mosquitto user:
 
 <pre><code class="language-shell">sudo chown -R mosquitto:mosquitto /etc/letsencrypt/live/shopinet.sytes.net</code></pre>
-
-✴ **Set read and write permissions** for the certificate files:
+✴ Set read and write permissions for the certificate files:
 
 <pre><code class="language-shell">sudo chmod -R 644 /etc/letsencrypt/live/shopinet.sytes.net</code></pre>
+✴ Fix permissions for the parent directories:
 
-✴ **Fix permissions for the parent directories**:
+<pre><code class="language-shell">sudo chown -R mosquitto:mosquitto /etc/letsencrypt</code></pre> <pre><code class="language-shell">sudo chmod -R 755 /etc/letsencrypt</code></pre>
+✴ Test certificate file accessibility:
 
-<pre><code class="language-shell">sudo chown -R mosquitto:mosquitto /etc/letsencrypt</code></pre>
-
-<pre><code class="language-shell">sudo chmod -R 755 /etc/letsencrypt</code></pre>
-
-✴ **Test certificate file accessibility**:
-
-<pre><code class="language-shell">openssl x509 -in /etc/letsencrypt/live/shopinet.sytes.net/fullchain.pem -text -noout</code></pre>
-
-<pre><code class="language-shell">openssl rsa -in /etc/letsencrypt/live/shopinet.sytes.net/privkey.pem -check</code></pre>
-
-✴ **Restart Mosquitto** service:
+<pre><code class="language-shell">openssl x509 -in /etc/letsencrypt/live/shopinet.sytes.net/fullchain.pem -text -noout</code></pre> <pre><code class="language-shell">openssl rsa -in /etc/letsencrypt/live/shopinet.sytes.net/privkey.pem -check</code></pre>
+✴ Restart Mosquitto service:
 
 <pre><code class="language-shell">sudo systemctl restart mosquitto</code></pre>
-
-✴ **Check Mosquitto status** to ensure it is active:
+✴ Check Mosquitto status to ensure it is active:
 
 <pre><code class="language-shell">sudo systemctl status mosquitto</code></pre>
+🚨 Note: If there are no errors, Mosquitto should be able to use SSL certificates for secure connections (HTTPS and WSS).
 
-🚨 **Note**: If there are no errors, Mosquitto should be able to use SSL certificates for secure connections (HTTPS and WSS).
+✴ Configure Mosquitto for SSL/TLS:
 
-</details>
+Add the following configuration to your mosquitto.conf file to enable both secure MQTT and WebSocket connections over SSL/TLS:
+
+<pre><code class="language-shell"> # MQTT over TCP (optional, default) listener 1883 protocol mqtt # Secure MQTT over TLS (MQTTS) listener 8883 protocol mqtt certfile /etc/letsencrypt/live/shopinet.sytes.net/fullchain.pem keyfile /etc/letsencrypt/live/shopinet.sytes.net/privkey.pem # WebSocket (optional) listener 9001 protocol websockets # Secure WebSocket (WSS) listener 8081 protocol websockets certfile /etc/letsencrypt/live/shopinet.sytes.net/fullchain.pem keyfile /etc/letsencrypt/live/shopinet.sytes.net/privkey.pem # Authentication allow_anonymous false password_file /etc/mosquitto/pwfile </code></pre>
+🚨 Note: After updating the mosquitto.conf file, restart the Mosquitto service again:
+
+<pre><code class="language-shell">sudo systemctl restart mosquitto</code></pre> </details>
 
 
 ---
