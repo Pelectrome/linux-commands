@@ -554,7 +554,6 @@ sudo certbot renew --dry-run
 
 Add the following configuration to your mosquitto.conf file to enable both secure MQTT and WebSocket connections over SSL/TLS:
 <pre><code class="language-shell">sudo nano /etc/mosquitto/mosquitto.conf</code></pre>
-</details>
 
 ```conf 
 # MQTT over TCP (optional, default) 
