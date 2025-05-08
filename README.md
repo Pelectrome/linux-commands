@@ -534,6 +534,42 @@ sudo certbot renew --dry-run
 </details>
 
 
+Certainly! Here's the process with clear, concise steps in the requested format:
+
+<details>
+  <summary><ins>Fix Permissions for Mosquitto SSL/TLS Certificates:</ins></summary>
+
+✴ **Set ownership for the certificate files** to `mosquitto` user:
+
+<pre><code class="language-shell">sudo chown -R mosquitto:mosquitto /etc/letsencrypt/live/shopinet.sytes.net</code></pre>
+
+✴ **Set read and write permissions** for the certificate files:
+
+<pre><code class="language-shell">sudo chmod -R 644 /etc/letsencrypt/live/shopinet.sytes.net</code></pre>
+
+✴ **Fix permissions for the parent directories**:
+
+<pre><code class="language-shell">sudo chown -R mosquitto:mosquitto /etc/letsencrypt</code></pre>
+
+<pre><code class="language-shell">sudo chmod -R 755 /etc/letsencrypt</code></pre>
+
+✴ **Test certificate file accessibility**:
+
+<pre><code class="language-shell">openssl x509 -in /etc/letsencrypt/live/shopinet.sytes.net/fullchain.pem -text -noout</code></pre>
+
+<pre><code class="language-shell">openssl rsa -in /etc/letsencrypt/live/shopinet.sytes.net/privkey.pem -check</code></pre>
+
+✴ **Restart Mosquitto** service:
+
+<pre><code class="language-shell">sudo systemctl restart mosquitto</code></pre>
+
+✴ **Check Mosquitto status** to ensure it is active:
+
+<pre><code class="language-shell">sudo systemctl status mosquitto</code></pre>
+
+🚨 **Note**: If there are no errors, Mosquitto should be able to use SSL certificates for secure connections (HTTPS and WSS).
+
+</details>
 
 
 ---
